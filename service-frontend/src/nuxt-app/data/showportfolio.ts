@@ -6,6 +6,7 @@ import { techs } from './techs';
 
 /**
  * Missing ones:
+ * - Harvey Norman
  * - Central coast GP
  * - Builders?
  * - What is excess
@@ -13,6 +14,7 @@ import { techs } from './techs';
 
 export const portfolioData: Portfolio[] = [
   {
+    slug: "anzip-website", 
     name: "Anzip - Website",
     date: new Date("2020-03"),
     client: clients.ipa,
@@ -48,6 +50,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "infraflix-video-streaming-platform", 
     name: "Infraflix - Video streaming platform",
     date: new Date("2020-02"),
     client: clients.ipa,
@@ -80,6 +83,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "crown-furniture-website", 
     name: "Crown furniture - Website",
     date: new Date("2020-01"),
     client: clients.ipa,
@@ -118,6 +122,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "lion-b2b-platform", 
     name: "Lion - B2B platform",
     date: new Date("2019-01"),
     client: clients.lion,
@@ -143,7 +148,8 @@ export const portfolioData: Portfolio[] = [
   },
 
   {
-    name: "Kanso - Frontend",
+    slug: "kanso-headless-frontend", 
+    name: "Kanso - Headless Frontend",
     date: new Date("2019-01"),
     client: clients.dorf,
     nrOfScreenshots: 4,
@@ -166,6 +172,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "cubelite-b2b-platform", 
     name: "Cubelite - B2b platform",
     date: new Date("2019-01"),
     client: clients.cub,
@@ -203,6 +210,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "anzduo-b2b-platform", 
     name: "Anzduo - B2b platform",
     date: new Date("2019-01"),
     client: clients.airnz,
@@ -232,6 +240,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "argyle-tender-widget", 
     name: "Argyle tender - Widget",
     date: new Date("2018-08"),
     client: clients.argyle,
@@ -255,7 +264,8 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    name: "Lark - Website plugin",
+    slug: "lark-wordpress-ecommerce plugin", 
+    name: "Lark - Wordpress ecommerce plugin",
     date: new Date("2018-01"),
     client: clients.lark,
     nrOfScreenshots: 3,
@@ -276,6 +286,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "beerenberg-website-maintenance", 
     name: "Beerenberg - Website maintenance",
     date: new Date("2017-06"),
     client: clients.beerenbe,
@@ -299,6 +310,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "books-and-gifts-direct-ecommerce", 
     name: "Books and Gifts Direct - Ecommerce",
     date: new Date("2016-08"),
     client: clients.booksandgifts,
@@ -327,6 +339,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "cocklebaywharf-website", 
     name: "Cocklebaywharf - Website",
     date: new Date("2016-04"),
     url: "https://www.cocklebaywharf.com.au",
@@ -353,6 +366,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "argyle-pink-diamonds-website", 
     name: "Argyle Pink Diamonds - Website",
     date: new Date("2016-04"),
     client: clients.argyle,
@@ -382,6 +396,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "tinyhunter-website", 
     name: "Tinyhunter - Website",
     date: new Date("2015-01"),
     client: clients.tinyhunter,
@@ -408,6 +423,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "sydney-airport-leasing-website", 
     name: "Sydney Airport Leasing Website",
     date: new Date("2015-01"),
     client: clients.sydneyairport,
@@ -433,6 +449,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "college-of-management-events", 
     name: "College of management events",
     date: new Date("2015-04"),
     client: clients.coem,
@@ -455,6 +472,7 @@ export const portfolioData: Portfolio[] = [
   },
 
   {
+    slug: "playsafe-website", 
     name: "Playsafe",
     date: new Date("2014-06"),
     client: clients.healthnsw,
@@ -483,7 +501,8 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    name: "D-rewards",
+    slug: 'diageo-rewards-b2b-platform',
+    name: "Diageo-rewards b2b platform",
     date: new Date("2014-01"),
     client: clients.diageo,
     nrOfScreenshots: 4,
@@ -505,6 +524,7 @@ export const portfolioData: Portfolio[] = [
     skillsLearned: ["Custom backend with Yii"],
   },
   {
+    slug: "diageo-promotions-b2b-platform", 
     name: "Diageo promotions",
     date: new Date("2013-04"),
     client: clients.diageo,
@@ -517,6 +537,7 @@ export const portfolioData: Portfolio[] = [
     skillsLearned: [],
   },
   {
+    slug: "westinghouse-solar-website", 
     name: "Westinghouse Solar - website",
     date: new Date("2013-04"),
     urlWebArchive:
@@ -528,7 +549,8 @@ export const portfolioData: Portfolio[] = [
     skillsLearned: [],
   },
   {
-    name: "Diageo trade solutions",
+    slug: "diageo-trade-solutions-b2b-platform", 
+    name: "Diageo trade solutions - B2B platform",
     date: new Date("2013-01"),
     client: clients.diageo,
     nrOfScreenshots: 4,
@@ -556,6 +578,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "shillington-college-website", 
     name: "Shillington College",
     date: new Date("2012-10"),
     client: clients.shillo,
@@ -582,6 +605,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "ocr-computer-vision-thesis", 
     name: "Ocr",
     date: new Date("2012-07"),
     nrOfScreenshots: 9,
@@ -610,6 +634,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "3d-engine-opengl", 
     name: "3d engine",
     date: new Date("2012-02"),
     nrOfScreenshots: 3,
@@ -635,6 +660,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "3d-photomosaic-computer-vision", 
     name: "3d Photomosaic",
     date: new Date("2012-01"),
     nrOfScreenshots: 6,
@@ -660,6 +686,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "orange-mail-email-marketing-platform", 
     name: "Orange mail",
     date: new Date("2010-11"),
     nrOfScreenshots: 4,
@@ -695,6 +722,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "manifattura-website-crawler-email-marketing",
     name: "Manifattura",
     date: new Date("2010-09"),
     nrOfScreenshots: 4,
@@ -724,6 +752,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "diomira-travel-symfony-website",
     name: "Diomira travel",
     date: new Date("2010-09"),
     nrOfScreenshots: 4,
@@ -758,6 +787,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "carrozzeria-casella-symfony-website",
     name: "Carrozzeria casella - Website",
     date: new Date("2010-05"),
     nrOfScreenshots: 4,
@@ -792,6 +822,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "air-silent-italia-symfony-website",
     name: "Air Silent Italia - Website",
     date: new Date("2009-01"),
     client: clients.airsilent,
@@ -816,6 +847,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "colombo-arredamenti-symfony-website",
     name: "Colombo arredamenti - Website",
     date: new Date("2008-12"),
     nrOfScreenshots: 4,
@@ -840,6 +872,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "123-vai-js-widget",
     name: "123Vai - Interactive widget",
     date: new Date("2008-08"),
     nrOfScreenshots: 1,
@@ -855,6 +888,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "tty-creo-insurance-b2b-platform",
     name: "Tty Creo - Web applications for insurance industry",
     date: new Date("2008-01"),
     client: clients.tty,
@@ -898,6 +932,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "wedding-booking-custom-blog",
     name: "Blog di nozze - Wedding gifts booking system and blog",
     date: new Date("2007-07"),
     nrOfScreenshots: 4,
@@ -917,6 +952,7 @@ export const portfolioData: Portfolio[] = [
   },
 
   {
+    slug: "asidb-warehouse-financial-webapp", 
     name: "Asidb - Warehouse & financial manager web application",
     date: new Date("2006-09"),
     client: clients.airsilent,
@@ -949,6 +985,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
+    slug: "astrolab-elearning-platform",
     name: "AstroLab - E-learning platform",
     date: new Date("2005-09"),
     client: clients.moelca,

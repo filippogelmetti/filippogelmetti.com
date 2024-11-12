@@ -4,6 +4,7 @@ import type { Country } from './country';
 import type { Tech } from './tech';
 
 export type Portfolio = {
+  slug: string;
   name: string;
   date?: Date;
   client?: Client;
