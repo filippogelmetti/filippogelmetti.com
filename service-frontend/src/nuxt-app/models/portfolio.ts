@@ -1,7 +1,7 @@
-import type { Award } from './award';
-import type { Client } from './client';
-import type { Country } from './country';
-import type { Tech } from './tech';
+import type { Award } from "./award";
+import type { Client } from "./client";
+import type { Country } from "./country";
+import type { Tech } from "./tech";
 
 export type Portfolio = {
   slug: string;
@@ -17,6 +17,7 @@ export type Portfolio = {
   techs?: Tech[];
   award?: Award;
   description?: string[];
+  shortDescription?: string;
   keyFeatures?: string[];
   skillsLearned?: string[];
 };

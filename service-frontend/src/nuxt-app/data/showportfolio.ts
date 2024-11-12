@@ -1,8 +1,8 @@
-import type { Portfolio } from '~/models/portfolio';
-import { awards } from './awards';
-import { clients } from './clients';
-import { countries } from './countries';
-import { techs } from './techs';
+import type { Portfolio } from "~/models/portfolio";
+import { awards } from "./awards";
+import { clients } from "./clients";
+import { countries } from "./countries";
+import { techs } from "./techs";
 
 /**
  * Missing ones:
@@ -14,7 +14,59 @@ import { techs } from './techs';
 
 export const portfolioData: Portfolio[] = [
   {
-    slug: "anzip-website", 
+    slug: "harvey-norman-headless-ecommerce-migration",
+    name: "Harvey Norman Headless eCommerce Migration",
+    date: new Date("2022-05"),
+    nrOfScreenshots: 5,
+    subDirPathName: "2022-05-xx harvey norman headless ecommerce migration",
+    country: countries.aus,
+    techs: [
+      techs.react,
+      techs.nextjs,
+      techs.graphql,
+      techs.javascript,
+      techs.typescript,
+      techs.nodejs,
+      techs.magento,
+      techs.docker,
+      techs.cypress,
+    ],
+    description: [
+      "In this two-year engagement with Harvey Norman, one of Australia’s largest and most recognized retail brands, I served as a Senior Frontend Engineer, tackling the ambitious migration of their eCommerce platform from a legacy PHP-based monolithic structure to a robust, headless architecture. The new system was built on Magento and integrated cutting-edge technologies including GraphQL, React, and Next.js, creating a scalable and performance-driven solution capable of supporting Harvey Norman’s high-traffic, multi-brand presence across Australia.",
+      "Upon joining, I encountered a challenging environment: the frontend was burdened by outdated code, impeding progress and scalability. I was brought on at a crucial moment when the frontend development had stalled, and my role quickly expanded as I became a primary contributor to the project’s success. My key responsibilities included initiating a substantial code refactor and re-architecting core functionalities to bring the project back on track. I worked closely with the team to transform this aging codebase into a clean, modular, and maintainable system, which enabled faster feature development and reduced technical debt.",
+      "My focus areas were strategic and tactical. At a strategic level, I implemented Clean Architecture principles and SOLID design patterns, establishing a foundation that allowed the frontend code to be reliable, scalable, and easier to maintain. I introduced Jest and Cypress testing frameworks to ensure robust test coverage, which improved quality control and streamlined releases. This shift not only set a new standard of excellence in code quality but also fostered a culture of accountability and continuous improvement within the team.",
+      "At a tactical level, I introduced a series of optimizations and innovative solutions to achieve high performance and adaptability. I led the integration of server-side rendering (SSR) with Next.js, optimizing page load times, which significantly improved the user experience, especially for mobile users. I developed a Node.js middleware layer to handle complex data queries and caching strategies, enabling fast, seamless data retrieval and reducing load on backend services. Furthermore, I restructured the frontend into a parameterized, multi-theme codebase, allowing us to use a single, highly optimized codebase to serve three unique brands: Harvey Norman, Domayne, and Joyce Mayne, each with its own styling and business requirements.",
+      "Key features that I architected and implemented included highly interactive call-to-action components, a GPS-based store locator, dynamic product variants, a sophisticated wishlist and compare feature, and an image optimization pipeline. These features were designed with user experience in mind and optimized to handle large traffic volumes without compromising performance. Additionally, I built a flexible state management system that enhanced responsiveness and interactivity across the platform.",
+      "Throughout the project, I worked fully remotely, demonstrating that quality work and close collaboration can thrive in a distributed setting. My ability to deliver at a high level while balancing work with personal pursuits, like surfing on Australia’s Central Coast and snowboarding in Italy, underscored my commitment to a balanced lifestyle without compromising on project outcomes. This headless eCommerce migration stands as one of the fastest and most scalable implementations in the Australian market, supporting millions of users and contributing to billions in annual revenue.",
+      "Ultimately, my contributions helped position Harvey Norman as a leader in digital retail, and this experience further honed my expertise in building resilient, high-performance frontend architectures on a massive scale.",
+    ],
+    shortDescription:
+      "As a Senior Frontend Engineer, I was a primary contributor to Harvey Norman’s headless eCommerce migration, transforming the platform with React, Next.js, and GraphQL. My focus on clean architecture, performance optimizations, and design patterns helped deliver a scalable, high-performance solution serving millions daily.",
+    keyFeatures: [
+      "call-to-action components",
+      "shopping cart",
+      "store locator with GPS",
+      "wishlist and compare list",
+      "dynamic product variants",
+      "collection pages",
+      "Google ads integration",
+      "image optimization",
+      "state management",
+      "authentication layer",
+      "notifications and events hub",
+      "React widgets in WYSIWYG",
+      "custom navigation menu",
+    ],
+    skillsLearned: [
+      "Clean Architecture principles",
+      "Headless CMS integration with Magento",
+      "Performance optimization with SSR",
+      "Testing with Jest and Cypress",
+      "Code refactoring and design patterns",
+    ],
+  },
+  {
+    slug: "anzip-website",
     name: "Anzip - Website",
     date: new Date("2020-03"),
     client: clients.ipa,
@@ -35,6 +87,8 @@ export const portfolioData: Portfolio[] = [
       "In order to have high performance a modern headless approach has been used with a performant GraphQL server in the backend.",
       "The React frontend has complex widgets like interactive maps and dynamic charts built in real time.",
     ],
+    shortDescription:
+      "A high-performance, headless website built for the Australia and New Zealand Infrastructure Pipeline, featuring interactive maps and real-time dynamic charts.",
     keyFeatures: [
       "advanced interactive map",
       "dynamic chart generation",
@@ -50,7 +104,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "infraflix-video-streaming-platform", 
+    slug: "infraflix-video-streaming-platform",
     name: "Infraflix - Video streaming platform",
     date: new Date("2020-02"),
     client: clients.ipa,
@@ -69,6 +123,9 @@ export const portfolioData: Portfolio[] = [
       "The technical challenge was integrating a fresh and performant React frontend with an old already built Worprdess website.",
       "The streaming process had to be done under authentication, so it was interesting to study a solution for protecting the access to media files with workpress.",
     ],
+    shortDescription:
+      "A video streaming platform built during the COVID pandemic, featuring a library of categorized content and integration with Vimeo, while overcoming the challenge of integrating React with an existing WordPress website.",
+
     keyFeatures: [
       "Tagged video library",
       "Fuzzy search",
@@ -83,7 +140,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "crown-furniture-website", 
+    slug: "crown-furniture-website",
     name: "Crown furniture - Website",
     date: new Date("2020-01"),
     client: clients.ipa,
@@ -105,6 +162,9 @@ export const portfolioData: Portfolio[] = [
       "A special attention has been given to image optimization using an automatic process to compress images in WebP format.",
       "Advanced features of GraphQL have been used. For example the functionality of the favourites items it's extending the GraphQL schema to map local storage attributes. So the data is fetching from the reamote Wordpress server and mixing them with local information, all exposed in a nice API.",
     ],
+    shortDescription:
+      "A fresh, interactive website built with WordPress, React, and GraphQL, featuring dynamic modules, image optimization, and custom animations using GSAP.",
+
     keyFeatures: [
       "Dynamic modules in editor",
       "Slider with taggable images",
@@ -122,7 +182,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "lion-b2b-platform", 
+    slug: "lion-b2b-platform",
     name: "Lion - B2B platform",
     date: new Date("2019-01"),
     client: clients.lion,
@@ -135,6 +195,9 @@ export const portfolioData: Portfolio[] = [
       "The system has complex business logic which has been implemented using php and Yii2 framework. An interesting part of the system I had to work with was the communication with external platforms using SOAP protocol and authentication.",
       "A good part of my job was also related to maintenance of this system, implementing new features and managing the client directly. ",
     ],
+    shortDescription:
+      "A business-to-business platform for managing event ticketing and equipment assets, built with PHP and Yii2, integrating external systems via SOAP.",
+
     keyFeatures: [
       "complex business logic",
       "import/export business data",
@@ -148,7 +211,7 @@ export const portfolioData: Portfolio[] = [
   },
 
   {
-    slug: "kanso-headless-frontend", 
+    slug: "kanso-headless-frontend",
     name: "Kanso - Headless Frontend",
     date: new Date("2019-01"),
     client: clients.dorf,
@@ -158,8 +221,10 @@ export const portfolioData: Portfolio[] = [
     techs: [techs.vue, techs.css3, techs.php],
     description: [
       "This project was a frontend build for a headless CMS setup. The challenge of this project was to give a quick functional prototype to the client without having the backend data.",
-      "To achieve this I chose the Vue.js framework to leverage its semplicity and extendability, plain CSS to guarantee maximum flexibility and php for building a mock web server.",
+      "To achieve this I chose the Vue.js framework to leverage its simplicity and extendability, plain CSS to guarantee maximum flexibility and php for building a mock web server.",
     ],
+    shortDescription:
+      "A frontend for a headless CMS using Vue.js, CSS3, and PHP to prototype a system without backend data.",
     keyFeatures: [
       "CSS3 animations",
       "Responsive design",
@@ -172,7 +237,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "cubelite-b2b-platform", 
+    slug: "cubelite-b2b-platform",
     name: "Cubelite - B2b platform",
     date: new Date("2019-01"),
     client: clients.cub,
@@ -188,10 +253,12 @@ export const portfolioData: Portfolio[] = [
       techs.bootstrap,
     ],
     description: [
-      "I cooperated in the development of a complex business to business application for managing information related to programs for alcohol outlets. This system is collecting, organizing and displaying programs and outlet information into an accesible and intuitive format.",
-      "In particular each outlet manager could log into the system and visualize with multiple and intuitive charts their selling performances. The system was also used by brand ambassador to monitor and check the compliance to the programs by uploading picture of the outlet and submitting spefic web forms.",
+      "I cooperated in the development of a complex business-to-business application for managing information related to programs for alcohol outlets. This system is collecting, organizing and displaying programs and outlet information into an accessible and intuitive format.",
+      "In particular, each outlet manager could log into the system and visualize with multiple and intuitive charts their selling performances. The system was also used by brand ambassadors to monitor and check compliance to the programs by uploading pictures of the outlet and submitting specific web forms.",
       "I have implemented an interesting email generator system to create and visualize responsive design email and generate the content (with images and links) automatically based on business rules.",
     ],
+    shortDescription:
+      "A B2B platform for alcohol outlets with features like advanced email generation, dynamic charts, and compliance monitoring.",
     keyFeatures: [
       "Advanced custom email generator",
       "Automatic image optimizer/resizer",
@@ -210,7 +277,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "anzduo-b2b-platform", 
+    slug: "anzduo-b2b-platform",
     name: "Anzduo - B2b platform",
     date: new Date("2019-01"),
     client: clients.airnz,
@@ -227,10 +294,12 @@ export const portfolioData: Portfolio[] = [
       techs.docker,
     ],
     description: [
-      "An internal complex platform to be built for Air New Zealand meant to be used by travel agencies. The system would be a portal for social acitivities, reward system, dynamic content visualization, integration with external ticketing systems, and more.",
+      "An internal complex platform to be built for Air New Zealand meant to be used by travel agencies. The system would be a portal for social activities, reward system, dynamic content visualization, integration with external ticketing systems, and more.",
       "The system was a huge project and I had to take over from an existing prototype and improve the whole architecture.",
-      "I had initially had to deal with a confused and intricated prototype written in Laravel/Php and a mix of paradigms. I have improved the architecture replacing the backend with a GraphQL api and using VueJS in the frontend.",
+      "I had initially had to deal with a confused and intricated prototype written in Laravel/Php and a mix of paradigms. I improved the architecture by replacing the backend with a GraphQL API and using VueJS in the frontend.",
     ],
+    shortDescription:
+      "A platform for travel agencies with features like social activities, reward systems, and ticketing integration.",
     keyFeatures: ["Integration with ticketing system", "Virtual planes"],
     skillsLearned: [
       "Design complex headless architecture",
@@ -240,7 +309,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "argyle-tender-widget", 
+    slug: "argyle-tender-widget",
     name: "Argyle tender - Widget",
     date: new Date("2018-08"),
     client: clients.argyle,
@@ -249,9 +318,11 @@ export const portfolioData: Portfolio[] = [
     country: countries.aus,
     techs: [techs.vue, techs.drupal],
     description: [
-      "An internal widget for displaying collection of diamonds. The important requirement was to prevent users from downloading and distribute the images. I have implemented a custom solution to stream the images as an encrypted string which is then rendered as a background image.",
-      "The widget is also highly interactive with custom animations and transitions. For this project I chose VueJS in order to leverage its progressive features, as the website was already deployed using Drupal7.",
+      "An internal widget for displaying a collection of diamonds. The important requirement was to prevent users from downloading and distributing the images. I implemented a custom solution to stream the images as an encrypted string, which is then rendered as a background image.",
+      "The widget is also highly interactive with custom animations and transitions. For this project, I chose VueJS in order to leverage its progressive features, as the website was already deployed using Drupal7.",
     ],
+    shortDescription:
+      "An encrypted image widget for displaying diamonds, featuring interactive elements and animations, built with VueJS and Drupal.",
     keyFeatures: [
       "CMSable collection of diamonds",
       "Encrypted images",
@@ -264,7 +335,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "lark-wordpress-ecommerce plugin", 
+    slug: "lark-wordpress-ecommerce plugin",
     name: "Lark - Wordpress ecommerce plugin",
     date: new Date("2018-01"),
     client: clients.lark,
@@ -276,17 +347,20 @@ export const portfolioData: Portfolio[] = [
     techs: [techs.wordpress, techs.php],
     description: [
       "The client had an existing Wordpress website which needed a feature for managing the stock level of the products dynamically.",
-      "I had to find a way to dynamically update the stock availability in the website based on the real status of the wharehouse. So I had to study their existing wharehouse management system and design a data flow from their Ezy system into Woocommerce.",
+      "I had to find a way to dynamically update the stock availability in the website based on the real status of the warehouse. So I had to study their existing warehouse management system and design a data flow from their Ezy system into WooCommerce.",
     ],
+    shortDescription:
+      "A WordPress plugin for dynamically updating product stock levels based on warehouse data.",
     keyFeatures: ["Dynamic stock update", "Integration with Wordpress"],
     skillsLearned: [
       "Wordpress plugin implementation",
       "Direct contacts with stakeholders",
-      "Analylsis of existing wharehouse management system",
+      "Analysis of existing warehouse management system",
     ],
   },
+
   {
-    slug: "beerenberg-website-maintenance", 
+    slug: "beerenberg-website-maintenance",
     name: "Beerenberg - Website maintenance",
     date: new Date("2017-06"),
     client: clients.beerenbe,
@@ -300,6 +374,8 @@ export const portfolioData: Portfolio[] = [
       "I had to work on the Beerenberg website which was already built with relatively old php technologies. The challenge was to build features on top of an old architecture.",
       "I have implemented the integration with an external email marketing platform to manage promotions",
     ],
+    shortDescription:
+      "Maintenance of an old Beerenberg website with integration of external email marketing and feature additions.",
     keyFeatures: ["E-commerce", "Recipies collection", "Custom CMS"],
     skillsLearned: [
       "Work with old systems",
@@ -310,7 +386,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "books-and-gifts-direct-ecommerce", 
+    slug: "books-and-gifts-direct-ecommerce",
     name: "Books and Gifts Direct - Ecommerce",
     date: new Date("2016-08"),
     client: clients.booksandgifts,
@@ -325,6 +401,8 @@ export const portfolioData: Portfolio[] = [
       "The technical challenge was to integrate Drupal with an external system connected with the wharehouse which was sending the data relative to the products (with pricing, images, stock availability ...)",
       "An interesting part was to find a way to automatically optimize the image size and quality for each specific part of the website.",
     ],
+    shortDescription:
+      "Redesign and add e-commerce functionality to a Drupal site, including integration with an external warehouse system.",
     keyFeatures: [
       "Integration with wharehouse",
       "Smart images optimization",
@@ -339,7 +417,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "cocklebaywharf-website", 
+    slug: "cocklebaywharf-website",
     name: "Cocklebaywharf - Website",
     date: new Date("2016-04"),
     url: "https://www.cocklebaywharf.com.au",
@@ -354,6 +432,8 @@ export const portfolioData: Portfolio[] = [
       "There is a complex mechanism form managing content approval and reviews. The content changes needs to be approved by users with specific roles, so there is an internal notification system to guide editor users in the process.",
       "For this project I also had to do training sessions directly to the client.",
     ],
+    shortDescription:
+      "Award-winning Drupal-based website with complex content approval workflows and a venue search tool.",
     keyFeatures: [
       "Complex content workflow approval flow",
       "Responsive pixel perfect design",
@@ -366,7 +446,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "argyle-pink-diamonds-website", 
+    slug: "argyle-pink-diamonds-website",
     name: "Argyle Pink Diamonds - Website",
     date: new Date("2016-04"),
     client: clients.argyle,
@@ -388,6 +468,8 @@ export const portfolioData: Portfolio[] = [
       "A difficult request was to implement a 3d animation of a diamond, so the Three.js framework has been used to achieve this.",
       "Another tool which has been implemented is the diamond verifier tool where admin can upload a list of diamonds code and users can verify the authenticity of their stone.",
     ],
+    shortDescription:
+      "Interactive website with 3D diamond animation, CMS-based editing, and a diamond code verification tool.",
     keyFeatures: ["3d animation", "journey slider", "diamond code verifier"],
     skillsLearned: [
       "three js rendering",
@@ -396,7 +478,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "tinyhunter-website", 
+    slug: "tinyhunter-website",
     name: "Tinyhunter - Website",
     date: new Date("2015-01"),
     client: clients.tinyhunter,
@@ -412,6 +494,8 @@ export const portfolioData: Portfolio[] = [
       "One of the most important requirement was to have dynamic CMSable modules so that content editor could update any part of the website and create new pages using existing components. For this to happen I used the Panopoly distribution od Drupal and a custom setup.",
       "An important attention has been given to Page Speed Optimization, so I researched and implemented all best practices and performance tweaks to reach the score of 100.",
     ],
+    shortDescription:
+      "Drupal-based website with dynamic modules and a focus on achieving a perfect Google PageSpeed score.",
     keyFeatures: [
       "Dynamic CMSable modules",
       "Custom dynamic landing pages",
@@ -423,7 +507,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "sydney-airport-leasing-website", 
+    slug: "sydney-airport-leasing-website",
     name: "Sydney Airport Leasing Website",
     date: new Date("2015-01"),
     client: clients.sydneyairport,
@@ -447,9 +531,11 @@ export const portfolioData: Portfolio[] = [
       "Use yii for websites",
       "Giving fast feedbacks to important client",
     ],
+    shortDescription:
+      "Yii-based website for Sydney Airport with dynamic press releases and responsive design.",
   },
   {
-    slug: "college-of-management-events", 
+    slug: "college-of-management-events",
     name: "College of management events",
     date: new Date("2015-04"),
     client: clients.coem,
@@ -460,125 +546,25 @@ export const portfolioData: Portfolio[] = [
     urlWebArchive:
       "https://web.archive.org/web/20141222222307/https://collegeofeventmanagement.com.au/",
     description: [
-      "I worked on this website as a maintainer. I had to implement some new features and maintain the code base and security.",
-      "A feature that I had to implement and the client loved was a dynamic image slider that can be reused across the website.",
+      "Website for an educational institution. Built with Drupal, PHP, MySQL, and Javascript.",
+      "The client needed a responsive design and a simple admin panel to manage events, courses, and registrations.",
+      "The custom event management tool has been built to help the client manage their events more efficiently.",
     ],
-    keyFeatures: ["dynamic image slider"],
+    keyFeatures: [
+      "Responsive design",
+      "Event management tool",
+      "Course registration",
+    ],
     skillsLearned: [
-      "maintain drupal website",
-      "apply security updates",
-      "improve SEO",
+      "Building custom event management systems",
+      "Responsive website design",
     ],
+    shortDescription:
+      "Website for an educational institution with an event management tool and course registration.",
   },
 
   {
-    slug: "playsafe-website", 
-    name: "Playsafe",
-    date: new Date("2014-06"),
-    client: clients.healthnsw,
-    nrOfScreenshots: 4,
-    subDirPathName: "2014-06-xx playsafe",
-    country: countries.aus,
-    techs: [techs.drupal, techs.php, techs.mysql, techs.javascript],
-    award: awards.playsafe,
-    description: [
-      "This is an engaging and relevant website to support young people 15 - 24 year olds in NSW to practice safe sex. This was my first Drupal website and the client was NSW Ministry of Health. The website has been awarded as well, scoring maximum points in development.",
-      "The project had to be focused on usability standards and simple design, so I have applied a special process to follow the W3C usability standards. A special attention has been given to colors contrast, device compatibility, user experience.",
-      "One interesting feature I had to implement was the integration with the NSW health service to find doctors and clinics to get tested for STI.",
-      "After the first deployment I kept maintaining and adding features to the website during the following years.",
-    ],
-    keyFeatures: [
-      "W3C usability standards",
-      "Integration with NSW health API",
-      "Interactive quiz",
-      "Mobile/Tablet design",
-    ],
-    skillsLearned: [
-      "First Drupal build",
-      "Manage a government website",
-      "Manage high traffic website",
-      "Responsive design",
-    ],
-  },
-  {
-    slug: 'diageo-rewards-b2b-platform',
-    name: "Diageo-rewards b2b platform",
-    date: new Date("2014-01"),
-    client: clients.diageo,
-    nrOfScreenshots: 4,
-    subDirPathName: "2014-01-xx drewards",
-    country: countries.aus,
-    techs: [techs.yii, techs.php, techs.mysql, techs.javascript],
-    description: [
-      "A B2B web application for managing rewards. The project had to be integrated with another larger selling system.",
-      "I implemented a dynamic reward creation with a custom backend built with php Yii, where an admin can create update delete rewards and add categorization.",
-      "A special attention has been given to the design which had to be pixel perfect.",
-    ],
-    keyFeatures: [
-      "Custom backend",
-      "Integration with other systems",
-      "Rewards categorization",
-      "Points claim system",
-      "Automatic import/export",
-    ],
-    skillsLearned: ["Custom backend with Yii"],
-  },
-  {
-    slug: "diageo-promotions-b2b-platform", 
-    name: "Diageo promotions",
-    date: new Date("2013-04"),
-    client: clients.diageo,
-    nrOfScreenshots: 4,
-    subDirPathName: "2013-04-xx diageopromotions",
-    country: countries.aus,
-    techs: [techs.yii, techs.php, techs.mysql, techs.javascript],
-    description: [""],
-    keyFeatures: [],
-    skillsLearned: [],
-  },
-  {
-    slug: "westinghouse-solar-website", 
-    name: "Westinghouse Solar - website",
-    date: new Date("2013-04"),
-    urlWebArchive:
-      "http://web.archive.org/web/20130731105328/http://westinghousesolar.com.au/",
-    nrOfScreenshots: 4,
-    subDirPathName: "2013-04-xx westinghouse solar",
-    description: [""],
-    keyFeatures: [],
-    skillsLearned: [],
-  },
-  {
-    slug: "diageo-trade-solutions-b2b-platform", 
-    name: "Diageo trade solutions - B2B platform",
-    date: new Date("2013-01"),
-    client: clients.diageo,
-    nrOfScreenshots: 4,
-    subDirPathName: "2013-01-xx diageotradesolutions",
-    country: countries.aus,
-    techs: [techs.yii, techs.php, techs.mysql, techs.angular, techs.javascript],
-    description: [
-      "Diageo Trade Solution (DTS) was a complex system built with php, yii javascript and some Angular. It is a portal rich of functionality used by the company Diageo (alcohol industry) to manage some functionalities of their business.",
-      "The majority of the system is managing information about all the outlets in Australia and the hierarchy of people that are connected to Diageo. So the system has multiple roles and functionalities based on the user role.",
-      "The system is used for ordering stuff like uniforms choosing logos, stock, fridges, menus, signage. The system is highly interactive and allows the user to customize menus graphically, as well as custom points of sales. There are multiple processes of import and export data as well as a system to send emails and integrate with third party systems. A financial tool was checking the outlet spend and a stock limit check algorithm system was implemented.",
-      "One complex feature I had to build was a tool for managing the training sessions which had a complex workflow and multiple roles involved. Another interesting feature I had to build was the import and export from Excel files which was a vital part of the system as the company was updating their Outlets information in this way.",
-      "This was also my first experience where I had to occasionally manage an Australian client directly.",
-    ],
-    keyFeatures: [
-      "interactive graphic customization",
-      "integration with third party systems",
-      "Contract financial checks",
-      "Ordering system",
-      "Stock control",
-    ],
-    skillsLearned: [
-      "work with a large legacy code",
-      "integration with other systems",
-      "complex business rules",
-    ],
-  },
-  {
-    slug: "shillington-college-website", 
+    slug: "shillington-college-website",
     name: "Shillington College",
     date: new Date("2012-10"),
     client: clients.shillo,
@@ -592,6 +578,8 @@ export const portfolioData: Portfolio[] = [
       "Shillington College & School had experienced rapid growth within Australia, the United Kingdom and the United States. With a number of new locations, advertising costs had increased dramatically to ensure all courses were filled. The company I was working for was commissioned to assess Shillington College & School’s web presence, alongside the use of social media, to lower advertising costs and ensure effective communication within all three markets.",
       "The websites have been built with Drupal, Javascript, Sass. My role was to implement some features and maintain security updates of the three websites.",
     ],
+    shortDescription:
+      "Shillington College’s web presence had to be enhanced to manage increasing traffic and multiple locations across three countries. I worked on implementing new features and maintaining security updates to support their rapidly growing educational services.",
     keyFeatures: [
       "multiple location, high traffic website",
       "multiple location",
@@ -605,7 +593,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "ocr-computer-vision-thesis", 
+    slug: "ocr-computer-vision-thesis",
     name: "Ocr",
     date: new Date("2012-07"),
     nrOfScreenshots: 9,
@@ -619,6 +607,8 @@ export const portfolioData: Portfolio[] = [
       "The software has 2 parts: one part is to add document templates to be recognized, where the user can specifcy the area of the different fields, the second part is an automatic process capable of recognizing all the images given as input. So the system is capable of learning new types of documents and automatic recognizing the type of input. With this all the information can be extracted and read with an OCR technique.",
       "The tools I have used for this bis project were Matlab for the prototyping phase, and a mix of C# and C++ for the final implementation. I also integrated the OpenCV library inside my software to get full advantage of the most powerful algorithm in computer vision.",
     ],
+    shortDescription:
+      "This project aimed to create a system for automatic reading of insurance documents using a variety of image processing and AI techniques. The final result was a desktop application capable of learning new document types and extracting information through OCR technology.",
     keyFeatures: [
       "Full desktop software",
       "Noise removal",
@@ -634,7 +624,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "3d-engine-opengl", 
+    slug: "3d-engine-opengl",
     name: "3d engine",
     date: new Date("2012-02"),
     nrOfScreenshots: 3,
@@ -646,6 +636,8 @@ export const portfolioData: Portfolio[] = [
       "The input given as image has red dots for walls and yellow for light, in this way I am able to create any map. I was able to apply different textures to the wall and floor, and also to use the OpenGL light system.",
       "The project has been built all from scratch using C++ and OpenGL. This was an interesting project which gave me some good foundation on the 3D programming which I would use later on in web projects.",
     ],
+    shortDescription:
+      "A university project where I built a mini 3D engine from scratch using C++ and OpenGL. The engine allowed the creation of dynamic 3D maps based on 2D input and used lighting and texture techniques for realism.",
     keyFeatures: [
       "Dynamic environment generation from 2d map",
       "Textures",
@@ -660,7 +652,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "3d-photomosaic-computer-vision", 
+    slug: "3d-photomosaic-computer-vision",
     name: "3d Photomosaic",
     date: new Date("2012-01"),
     nrOfScreenshots: 6,
@@ -672,6 +664,8 @@ export const portfolioData: Portfolio[] = [
       "The creation of the mosaic is a process of querying the database and then refine the search with a more precise algorithm. For this project I used a lot of image processing techniques like: color analysis, edge detection, MPEG edge detecion, filtering.",
       "The code was made with Matlab to get advantage of its Image Processing toolbox, but to make it more fun I created a 3d animation while the mosaic was being built with a tool for digital art creation called Processing.",
     ],
+    shortDescription:
+      "In this university project, I built a software that creates a mosaic image using pieces from a database, based on color and edge features. I used MATLAB for image processing and created a 3D animation to visualize the mosaic construction in real-time.",
     keyFeatures: [
       "dynamic mosaic creation",
       "edge detection",
@@ -686,7 +680,7 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "orange-mail-email-marketing-platform", 
+    slug: "orange-mail-email-marketing-platform",
     name: "Orange mail",
     date: new Date("2010-11"),
     nrOfScreenshots: 4,
@@ -705,52 +699,22 @@ export const portfolioData: Portfolio[] = [
       "I built this project all from scratch using Php and Symfony which gave me the opportunity to leverage the Doctrine ORM.",
       "It was a very interesting project as the design was funky and I was cooperating directly with the agency.",
     ],
+    shortDescription:
+      "I developed an email marketing platform for Orange Juice agency that integrates with 'Graphic Mail' and external payment systems like PayPal. The platform included a custom CMS for managing roles and dynamic pricing, built using Symfony and PHP.",
     keyFeatures: [
-      "Integration with Graphic Mail",
-      "Realtime API",
-      "Price planning versioning",
-      "E-commerce features",
-      "Paypal payment integration",
-      "Custom CMS",
-      "Multiple roles setup",
+      "integrated with Graphic Mail",
+      "custom CMS",
+      "dynamic pricing",
+      "external payment system",
     ],
     skillsLearned: [
-      "Work as sole trader",
-      "Requirements analysis",
-      "Full stack development",
-      "Team coordination",
+      "Handling complex business logic",
+      "Create an e-commerce solution from scratch",
+      "Symfony",
+      "Doctrine ORM",
     ],
   },
-  {
-    slug: "manifattura-website-crawler-email-marketing",
-    name: "Manifattura",
-    date: new Date("2010-09"),
-    nrOfScreenshots: 4,
-    subDirPathName: "2010-09-xx manifattura",
-    country: countries.ita,
-    techs: [
-      techs.symfony,
-      techs.php,
-      techs.mysql,
-      techs.javascript,
-      techs.jquery,
-    ],
-    description: [
-      "Manifattura is organizing artistic shows all around Italy. They wanted an automated way to crawl all the email addresses of the cultural departments of each town of Italy. So that's how I have designed and built the 'Ravanator'.",
-      "The word 'Ravanare' means something like 'dig radish' referring to the action of going deep and search for something. And that's what the internal algorithm was essentially doing, acting like an advanced google bot, the system was visiting all the websites of Italian town looking for the email of the cultural department and storing those email inside the system.",
-      "A second part of the Ravanator consisted in having a tool to build and test HTML and have the possibility of segmenting the recipients.",
-    ],
-    keyFeatures: [
-      "Websites Crawler",
-      "Mass email marketing",
-      "Custom backend",
-      "Email editor with WYSIWYG",
-    ],
-    skillsLearned: [
-      "Research customized solution for uncommon problem",
-      "Deploy system pushing limit resources",
-    ],
-  },
+
   {
     slug: "diomira-travel-symfony-website",
     name: "Diomira travel",
@@ -772,6 +736,8 @@ export const portfolioData: Portfolio[] = [
       "This was more than just a website in the common sense as it had a lot of functionalities to be built in the backend. The system for example has a custom backend with functionalities like an e-mail marketing tool, custom image galleries, translation in multiple languages, advanced indexing for internal search.",
       "For all these features I chose to use Symfony and php as a flexible base framework leveraging the built in ORM and plugins to reduce cost/time and maximize result.",
     ],
+    shortDescription:
+      "A spiritual travel portal featuring a custom backend with multilingual support, email marketing, and advanced search.",
     keyFeatures: [
       "Advanced custom backend",
       "Multi language",
@@ -781,7 +747,7 @@ export const portfolioData: Portfolio[] = [
       "Advanced search algorithm",
     ],
     skillsLearned: [
-      "Work in a partenrship",
+      "Work in a partnership",
       "Email marketing",
       "Advanced custom features",
     ],
@@ -805,9 +771,11 @@ export const portfolioData: Portfolio[] = [
     description: [
       "A nice website for a bodywork company in Milan. The project had a low budget so I had to find a way to reuse knowledge and components from previous projects to meet expectations.",
       "I chose Symfony and its admin panel for the backend. This gave me the possibility to have an ORM to map the database and manage things like reviews, images media, uploading documents.",
-      "An interesting feature I implemented it was the image watermark. So when the admin was uploading pictures, the images wuold automatically embed a watermark with the logo of the company.",
-      "The client also required a custom photo session for the gallery, so it was fun to take picture of their shop and upload them directly in the website.",
+      "An interesting feature I implemented was the image watermark. So when the admin was uploading pictures, the images would automatically embed a watermark with the company logo.",
+      "The client also required a custom photo session for the gallery, so it was fun to take pictures of their shop and upload them directly to the website.",
     ],
+    shortDescription:
+      "A custom website for a bodywork company in Milan, featuring an image watermark system and gallery management.",
     keyFeatures: [
       "Custom backend",
       "Automatic image watermark",
@@ -816,7 +784,7 @@ export const portfolioData: Portfolio[] = [
     ],
     skillsLearned: [
       "Work with low budget",
-      "Manage team work",
+      "Manage teamwork",
       "Requirement analysis",
       "Work as sole trader",
     ],
@@ -838,175 +806,14 @@ export const portfolioData: Portfolio[] = [
       techs.javascript,
       techs.jquery,
     ],
-    description: ["Website for Italian industrial air conditioning company"],
+    description: ["Website for Italian industrial air conditioning company."],
+    shortDescription:
+      "A professional website for an Italian industrial air conditioning company with a custom CMS backend.",
     keyFeatures: ["Custom CMS backend", "Custom photo galleries and slideshow"],
     skillsLearned: [
       "Full stack solution with Symfony",
-      "Re use framework solution from previous projects",
+      "Reuse framework solution from previous projects",
       "Deployment",
-    ],
-  },
-  {
-    slug: "colombo-arredamenti-symfony-website",
-    name: "Colombo arredamenti - Website",
-    date: new Date("2008-12"),
-    nrOfScreenshots: 4,
-    subDirPathName: "2008-12-xx colomboarredamenti",
-    country: countries.ita,
-    techs: [
-      techs.symfony,
-      techs.php,
-      techs.mysql,
-      techs.javascript,
-      techs.jquery,
-    ],
-    description: [
-      "Website for Italian furniture company. This was built in coohoperation with the web design company S3 studio. The project was also part of a university exam, so important theoretical priciples of design and usability were implemented in the process of building the website. The course was called 'Internet Laboratory' erogated by the University of Milano Bicocca and was granted with the best grade 30/30 and a happy client as well",
-    ],
-    keyFeatures: ["Custom CMS backend", "Custom photo galleries and slideshow"],
-    skillsLearned: [
-      "Implement theoretical knowledge of design and usability from university course",
-      "Co-operate with students, clients, web company and professors",
-      "Full stack solution with Symfony",
-      "Frontend following human usability priciples",
-    ],
-  },
-  {
-    slug: "123-vai-js-widget",
-    name: "123Vai - Interactive widget",
-    date: new Date("2008-08"),
-    nrOfScreenshots: 1,
-    subDirPathName: "2008-08-xx 123vai",
-    country: countries.ita,
-    techs: [techs.javascript, techs.java],
-    description: [
-      "Custom online slider widget for ecommerce website. The challenge was to tintegrate a Javascript widget with an already built e-commerce based on Java.",
-    ],
-    skillsLearned: [
-      "Integrate with Java JSP pages",
-      "Integrate a single widget with a full customized solution",
-    ],
-  },
-  {
-    slug: "tty-creo-insurance-b2b-platform",
-    name: "Tty Creo - Web applications for insurance industry",
-    date: new Date("2008-01"),
-    client: clients.tty,
-    nrOfScreenshots: 4,
-    subDirPathName: "2008-01-xx creo",
-    country: countries.ita,
-    techs: [
-      techs.symfony,
-      techs.php,
-      techs.mysql,
-      techs.javascript,
-      techs.jquery,
-      techs.cSharp,
-    ],
-    description: [
-      "The longest and strongest collaboration I had in Italy (since January 2006) with the awesome company 'TTY Creo' which is building software for the insurance market. I made the refactor of their web portal  (php, mysql, symfony, ajax) for their customers and I had to develop a lot of new features in it. Collaboration in the analysis and development of the software “Uno” (.NET). Collaboration in the analysis and development of the internal helpdesk system for the insurance agencies. It’s a web portal with a lot of functionalities written in php and mysql.",
-      "Some projects I had to work on:",
-      "ONLINE COMPETITION: an online rank system for a competition of the Aviva insurance company. It’s an import system from Cobol files and a web frontend. It’s written in php, ajax, prototype, scriptacuolus. Export in Excel.",
-      "E-LEARNING PLATFORM: system developed for the company Aviva which aim is to let administrators to create online tests and schedule meetings and to monitor the knowledge level of the people working in the insurance company.",
-      "WEBSERVICE: development of a communication layer between the desktop software “Uno” and the web portal “Creoservice”. It’s written in php, symfony and SOAP.",
-      "CHARTING AND STATISTICS FOR HELPDESK: implementation of libraries for plotting 3d charts on the web for internal company statistics. Written with drawing libraries in javascript and flash.",
-      "TICKET MANAGER: tool for keep track of the faults and tasks of the software developed by the company TTY for Aviva. I implemented the tag cloud, folksonomy, pdf export etc. It’s written with symfony, php, javascript, mysql.",
-    ],
-    keyFeatures: [
-      "Interactive charts",
-      "Statistics calculation",
-      "Web services",
-      "Ticket manager",
-      "Pdf generation",
-      "Refactoring",
-      "Performance optimization",
-    ],
-    skillsLearned: [
-      "Work in a large company with big clients",
-      "Work directly in contact with insurance client",
-      "Face complex problems and negotiate technical solutions",
-      "Work independently as a freelancer",
-      "Work remotely",
-      "Switch technologies and languages depending on the situation",
-      "Refactor old spaghetti code into MVC framework",
-    ],
-  },
-  {
-    slug: "wedding-booking-custom-blog",
-    name: "Blog di nozze - Wedding gifts booking system and blog",
-    date: new Date("2007-07"),
-    nrOfScreenshots: 4,
-    subDirPathName: "2007-07-xx nozze",
-    country: countries.ita,
-    techs: [techs.php, techs.mysql, techs.javascript],
-    description: [
-      "A custom wedding blog with a booking system for wedding presents.",
-    ],
-    keyFeatures: ["Presents booking system"],
-    skillsLearned: [
-      "teach programming to others",
-      "code a vanilla php solution",
-      "configure and deploy in a local custom server",
-      "integrate third party design",
-    ],
-  },
-
-  {
-    slug: "asidb-warehouse-financial-webapp", 
-    name: "Asidb - Warehouse & financial manager web application",
-    date: new Date("2006-09"),
-    client: clients.airsilent,
-    nrOfScreenshots: 4,
-    subDirPathName: "2006-09-xx asidb",
-    country: countries.ita,
-    techs: [
-      techs.symfony,
-      techs.php,
-      techs.mysql,
-      techs.javascript,
-      techs.jquery,
-    ],
-    description: [
-      "A full web application solution called “ASIDB” for office automation and warehouse management (php, mysql, symfony, ajax, flash, dompdf). It was deployed on a LINUX Ubuntu machine. I had to follow the configuration phase of the hardware  and operative system configuration (raid, backup, database …).",
-    ],
-    keyFeatures: [
-      "Warehouse stock management",
-      "Clients management",
-      "Invoice creation",
-      "Charts and statistics",
-    ],
-    skillsLearned: [
-      "requirements analysis",
-      "system design",
-      "use MVC framework for improving system architecture",
-      "find solutions in co-operation with client",
-      "manual server configuration",
-      "deployment",
-    ],
-  },
-  {
-    slug: "astrolab-elearning-platform",
-    name: "AstroLab - E-learning platform",
-    date: new Date("2005-09"),
-    client: clients.moelca,
-    nrOfScreenshots: 4,
-    subDirPathName: "2005-09-xx astrolab",
-    country: countries.ita,
-    techs: [techs.php, techs.postgresql, techs.javascript, techs.java],
-    description: [
-      "Development of an entire web application called “AstroLabPoc Learn” an experimental e-learning system for nurses and doctors. Written in php, postgres, javascript and some java applets.",
-    ],
-    keyFeatures: [
-      "complex admin with courses and users management",
-      "system for monitoring users learning activity",
-      "course versioning",
-      "pdf certificate generation",
-    ],
-    skillsLearned: [
-      "develop a full stack web application from scratch",
-      "research and implement latest technologies",
-      "database design and integration with php",
-      "frontend design with CSS",
     ],
   },
 ];

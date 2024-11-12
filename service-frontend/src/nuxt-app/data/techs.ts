@@ -1,5 +1,5 @@
-import type { Tech } from '~/models/tech';
-import { TechId } from '~/models/tech-id';
+import type { Tech } from "~/models/tech";
+import { TechId } from "~/models/tech-id";
 
 type HashTableTechs<T> = {
   [key in TechId]: T;
@@ -50,6 +50,11 @@ export const techs: HashTableTechs<Tech> = {
     id: TechId.css3,
     name: "css",
     icon: "css3.svg",
+  },
+  cypress: {
+    id: TechId.cypress,
+    name: "cypress",
+    icon: "cypress.svg",
   },
   docker: {
     id: TechId.docker,
@@ -115,6 +120,11 @@ export const techs: HashTableTechs<Tech> = {
     id: TechId.laravel,
     name: "laravel",
     icon: "laravel.svg",
+  },
+  magento: {
+    id: TechId.magento,
+    name: "magento",
+    icon: "magento.svg",
   },
   matlab: {
     id: TechId.matlab,

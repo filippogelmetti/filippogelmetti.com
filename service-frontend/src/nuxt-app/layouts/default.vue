@@ -9,7 +9,7 @@
     <NuxtPage />
 
     <footer>
-      <p>&copy; 2024 My Shop</p>
+      <p>&copy; 2024 Filippo Gelmetti</p>
     </footer>
   </div>
 </template>

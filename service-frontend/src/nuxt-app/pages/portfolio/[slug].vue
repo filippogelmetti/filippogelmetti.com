@@ -18,7 +18,4 @@ import { usePortfolio } from "~/composables/usePortfolio";
 const route = useRoute();
 const portfolio = usePortfolio();
 const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
-
-console.log("Route slug:", route.params.slug);
-console.log("Portfolio Item:", portfolioItem);
 </script>
