@@ -1,5 +1,5 @@
-import { Award } from '../../../domain/models';
-import { AwardId } from '../../../domain/models/award-id';
+import type { Award } from '~/models/award';
+import { AwardId } from '~/models/award-id';
 
 type HashTableAwards<T> = {
   [key in AwardId]: T;

@@ -1,5 +1,5 @@
-import { Country } from '../../../domain/models/country';
-import { CountryId } from '../../../domain/models/country-id';
+import type { Country } from '~/models/country';
+import { CountryId } from '~/models/country-id';
 
 type HashTableCountries<T> = {
   [key in CountryId]: T;

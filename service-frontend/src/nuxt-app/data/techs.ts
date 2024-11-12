@@ -1,5 +1,5 @@
-import { Tech } from '../../../domain/models';
-import { TechId } from '../../../domain/models/tech-id';
+import type { Tech } from '~/models/tech';
+import { TechId } from '~/models/tech-id';
 
 type HashTableTechs<T> = {
   [key in TechId]: T;

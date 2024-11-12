@@ -1,4 +1,4 @@
-import { Portfolio } from '../../../domain/models';
+import type { Portfolio } from '~/models/portfolio';
 import { awards } from './awards';
 import { clients } from './clients';
 import { countries } from './countries';
