@@ -19,3 +19,5 @@ const route = useRoute();
 const portfolio = usePortfolio();
 const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
 </script>
+
+<style scoped src="./portfolio-item.scss" />
