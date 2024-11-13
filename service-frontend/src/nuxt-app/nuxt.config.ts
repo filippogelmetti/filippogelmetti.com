@@ -1,15 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ["@/assets/scss/main.scss"],
+  css: ["@/assets/style/global.scss"],
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
+          api: "modern-compiler",
           additionalData: `
-            @use "@/assets/scss/mixins" as *;
-            @use "@/assets/scss/fonts" as *;
+            @use "@/assets/style/scss-shared-modules/mixins" as *;
+            @use "@/assets/style/scss-shared-modules/colors.scss" as *;
           `,
         },
       },

@@ -1,5 +1,8 @@
 <template>
-  <div v-if="portfolioItem">
+  <div
+    v-if="portfolioItem"
+    class="portfolio-item"
+  >
     <h1>{{ portfolioItem.name }}</h1>
     <p
       v-for="desc in portfolioItem.description"
