@@ -1,0 +1,58 @@
+$padding-default-big: 80px;
+$padding-default-mobile: 20px;
+
+@function rem-calc($px) {
+  @return $px/16 + rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: rem-calc(1366);
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include breakpoint(bp-medium) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.padded-default-left {
+  padding-left: $padding-default-mobile;
+
+  @include breakpoint(bp-large) {
+    padding-left: $padding-default-big;
+  }
+}
+
+.padded-default {
+  padding: $padding-default-mobile;
+
+  @include breakpoint(bp-large) {
+    padding: $padding-default-big;
+  }
+}
+
+.padded-after {
+  padding-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 1px;
+}

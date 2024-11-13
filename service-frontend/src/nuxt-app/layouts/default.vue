@@ -14,4 +14,4 @@
   </div>
 </template>
 
-<style scoped src="./default.scss" />
+<style src="./default.scss" />

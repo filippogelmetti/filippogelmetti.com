@@ -47,4 +47,4 @@ import { usePortfolio } from "~/composables/usePortfolio";
 const portfolio = usePortfolio();
 </script>
 
-<style scoped src="./portfolio-list.scss" />
+<style src="./portfolio-list.scss" />

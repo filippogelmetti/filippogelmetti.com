@@ -2,12 +2,11 @@
 export default defineNuxtConfig({
   css: ["@/assets/style/global.scss"],
   compatibilityDate: "2024-04-03",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          api: "modern-compiler",
           additionalData: `
             @use "@/assets/style/scss-shared-modules/mixins" as *;
             @use "@/assets/style/scss-shared-modules/colors.scss" as *;
@@ -16,4 +15,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  vue: {},
 });
