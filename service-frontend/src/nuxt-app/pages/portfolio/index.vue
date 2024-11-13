@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { usePortfolio } from "~/composables/usePortfolio";
+const portfolio = usePortfolio();
+</script>
+
+<style src="./portfolio-list.scss" />
 <template>
   <div class="portfolio-container">
     <h1>Portfolio Projects</h1>
@@ -7,8 +13,8 @@
         :key="item.slug"
         class="portfolio-card"
       >
-        <nuxt-link
-          :to="`/portfolio/${item.slug}`"
+        <a
+          :href="`/portfolio/${item.slug}`"
           class="card-content"
         >
           <img
@@ -35,16 +41,8 @@
             </span>
           </div>
           <button class="view-more">View More</button>
-        </nuxt-link>
+        </a>
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { usePortfolio } from "~/composables/usePortfolio";
-
-const portfolio = usePortfolio();
-</script>
-
-<style src="./portfolio-list.scss" />

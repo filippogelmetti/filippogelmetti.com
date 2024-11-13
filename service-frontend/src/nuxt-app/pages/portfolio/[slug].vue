@@ -8,7 +8,6 @@ const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
 </script>
 
 <style src="./portfolio-item.scss" />
-
 <template>
   <div
     v-if="portfolioItem"
