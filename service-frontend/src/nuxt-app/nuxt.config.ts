@@ -9,8 +9,7 @@ export default defineNuxtConfig({
         scss: {
           additionalData: `            
             @use "@/assets/style/scss-shared-modules/mixins" as *;
-            @use "@/assets/style/scss-shared-modules/colors.scss" as *;
-            
+            @use "@/assets/style/scss-shared-modules/colors.scss" as *;            
           `,
         },
       },

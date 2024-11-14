@@ -6,7 +6,6 @@ import { techs } from "./techs";
 
 /**
  * Missing ones:
- * - Harvey Norman
  * - Central coast GP
  * - Builders?
  * - What is excess
@@ -17,9 +16,10 @@ export const portfolioData: Portfolio[] = [
     slug: "harvey-norman-headless-ecommerce-migration",
     name: "Harvey Norman Headless eCommerce Migration",
     date: new Date("2022-05"),
-    nrOfScreenshots: 5,
-    subDirPathName: "2022-05-xx harvey norman headless ecommerce migration",
+    nrOfScreenshots: 16,
+    subDirPathName: "2024-04-xx harvey norman",
     country: countries.aus,
+    url: "https://harveynorman.com.au",
     techs: [
       techs.react,
       techs.nextjs,

@@ -94,7 +94,7 @@ const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
             <div class="label">Live Url</div>
             <div class="value-highlight">
               <a
-                :href="`/portfolio/${portfolioItem.url}`"
+                :href="`${portfolioItem.url}`"
                 target="_blank"
                 class="card-content"
               >
