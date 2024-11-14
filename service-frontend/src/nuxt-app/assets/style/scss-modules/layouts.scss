@@ -1,8 +1,11 @@
+@use "@/assets/style/scss-shared-modules/breakpoints.scss" as *;
+@use "sass:math";
+
 $padding-default-big: 80px;
 $padding-default-mobile: 20px;
 
 @function rem-calc($px) {
-  @return $px/16 + rem;
+  @return math.div($px, 16) * 1rem;
 }
 
 *,

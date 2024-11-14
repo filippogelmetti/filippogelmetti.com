@@ -1,3 +1,5 @@
+@use "@/assets/style/scss-shared-modules/breakpoints.scss" as *;
+
 .layout-left-65-right-35-container {
   display: flex;
   flex-direction: column;
