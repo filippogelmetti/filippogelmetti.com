@@ -24,6 +24,15 @@ const portfolio = usePortfolio();
             class="thumbnail"
           />
           <h2>{{ item.name }}</h2>
+          <p class="category-tag-wrapper">
+            <span
+              v-for="category in item.categoriesProjectType"
+              :key="category.id"
+              class="category-tag"
+            >
+              {{ category.name }}
+            </span>
+          </p>
           <p class="description">
             {{ item.shortDescription }}
           </p>

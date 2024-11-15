@@ -15,7 +15,7 @@ import { categoriesProjectType } from "./categories-project-type";
 export const portfolioData: Portfolio[] = [
   {
     slug: "harvey-norman-headless-ecommerce-migration",
-    name: "Harvey Norman Headless eCommerce Migration",
+    name: "Harvey Norman",
     categoriesProjectType: [
       categoriesProjectType.website,
       categoriesProjectType.ecommerce,
@@ -74,7 +74,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "anzip-website",
-    name: "Anzip - Website",
+    name: "Anzip",
     categoriesProjectType: [
       categoriesProjectType.website,
       categoriesProjectType.headless,
@@ -119,7 +119,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "infraflix-video-streaming-platform",
-    name: "Infraflix - Video streaming platform",
+    name: "Infraflix",
     categoriesProjectType: [
       categoriesProjectType.website,
       categoriesProjectType.videoStreaming,
@@ -159,7 +159,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "crown-furniture-website",
-    name: "Crown furniture - Website",
+    name: "Crown furniture",
     categoriesProjectType: [
       categoriesProjectType.website,
       categoriesProjectType.cms,
@@ -206,7 +206,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "lion-b2b-platform",
-    name: "Lion - B2B platform",
+    name: "Lion",
     categoriesProjectType: [
       categoriesProjectType.b2bPlatform,
       categoriesProjectType.customAdminPanel,
@@ -243,7 +243,7 @@ export const portfolioData: Portfolio[] = [
 
   {
     slug: "kanso-headless-frontend",
-    name: "Kanso - Headless Frontend",
+    name: "Kanso",
     categoriesProjectType: [
       categoriesProjectType.website,
       categoriesProjectType.cms,
@@ -280,7 +280,7 @@ export const portfolioData: Portfolio[] = [
 
   {
     slug: "cubelite-b2b-platform",
-    name: "Cubelite - B2b platform",
+    name: "Cubelite",
     categoriesProjectType: [
       categoriesProjectType.b2bPlatform,
       categoriesProjectType.corporateWebsite,
@@ -325,7 +325,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "anzduo-b2b-platform",
-    name: "Anzduo - B2B Platform",
+    name: "Anzduo",
     categoriesProjectType: [
       categoriesProjectType.b2bPlatform,
       categoriesProjectType.api,
@@ -370,7 +370,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "argyle-tender-widget",
-    name: "Argyle tender - Widget",
+    name: "Argyle tender",
     categoriesProjectType: [
       categoriesProjectType.widget,
       categoriesProjectType.headless,
@@ -438,7 +438,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "beerenberg-website-maintenance",
-    name: "Beerenberg - Website maintenance",
+    name: "Beerenberg  maintenance",
     date: new Date("2017-06"),
     client: clients.beerenbe,
     nrOfScreenshots: 4,
@@ -506,7 +506,7 @@ export const portfolioData: Portfolio[] = [
 
   {
     slug: "cocklebaywharf-website",
-    name: "Cocklebaywharf - Website",
+    name: "Cocklebaywharf ",
     date: new Date("2016-04"),
     url: "https://www.cocklebaywharf.com.au",
     client: clients.cocklebay,
@@ -538,7 +538,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "argyle-pink-diamonds-website",
-    name: "Argyle Pink Diamonds - Website",
+    name: "Argyle Pink Diamonds ",
     date: new Date("2016-04"),
     client: clients.argyle,
     nrOfScreenshots: 4,
@@ -576,7 +576,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "tinyhunter-website",
-    name: "Tinyhunter - Website",
+    name: "Tinyhunter ",
     date: new Date("2015-01"),
     client: clients.tinyhunter,
     nrOfScreenshots: 4,
@@ -769,7 +769,7 @@ export const portfolioData: Portfolio[] = [
 
   {
     slug: "westinghouse-solar-website",
-    name: "Westinghouse Solar - Website",
+    name: "Westinghouse Solar ",
     date: new Date("2013-04"),
     urlWebArchive:
       "http://web.archive.org/web/20130731105328/http://westinghousesolar.com.au/",
@@ -1083,7 +1083,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "carrozzeria-casella-symfony-website",
-    name: "Carrozzeria Casella - Website",
+    name: "Carrozzeria Casella ",
     date: new Date("2010-05"),
     nrOfScreenshots: 4,
     urlWebArchive:
@@ -1122,7 +1122,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "air-silent-italia-symfony-website",
-    name: "Air Silent Italia - Website",
+    name: "Air Silent Italia ",
     date: new Date("2009-01"),
     client: clients.airsilent,
     urlWebArchive:
@@ -1160,7 +1160,7 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "colombo-arredamenti-website",
-    name: "Colombo Arredamenti - Website",
+    name: "Colombo Arredamenti ",
     date: new Date("2008-12"),
     nrOfScreenshots: 4,
     subDirPathName: "2008-12-xx colomboarredamenti",
@@ -1297,7 +1297,11 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "asidb-warehouse-financial-platform",
-    name: "Asidb - Warehouse & Financial Manager Web Application",
+    name: "Asidb",
+    categoriesProjectType: [
+      categoriesProjectType.fullStack,
+      categoriesProjectType.webapp,
+    ],
     date: new Date("2006-09"),
     client: clients.airsilent,
     nrOfScreenshots: 4,
@@ -1335,7 +1339,13 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "astrolab-elearning-platform",
-    name: "AstroLab - E-learning platform",
+    name: "AstroLab",
+    categoriesProjectType: [
+      categoriesProjectType.educationalPlatform,
+      categoriesProjectType.fullStack,
+      categoriesProjectType.saas,
+      categoriesProjectType.customAdminPanel,
+    ],
     date: new Date("2005-09"),
     client: clients.moelca,
     nrOfScreenshots: 4,
