@@ -7,6 +7,8 @@ import { categoriesProjectType } from "./categories-project-type";
 
 /**
  * Missing ones:
+ * - Tinyhunter automation scripts (compress images, Google Score Analytics, Auto updater, Backups, AWS backup)
+ * - Tinyhunter email client generator
  * - Central coast GP
  * - Builders?
  * - What is excess
@@ -21,6 +23,7 @@ export const portfolioData: Portfolio[] = [
       categoriesProjectType.ecommerce,
       categoriesProjectType.headless,
       categoriesProjectType.frontend,
+      categoriesProjectType.api,
     ],
     date: new Date("2022-05"),
     nrOfScreenshots: 16,
@@ -37,6 +40,7 @@ export const portfolioData: Portfolio[] = [
       techs.magento,
       techs.docker,
       techs.cypress,
+      techs.jest,
     ],
     description: [
       "In this two-year engagement with Harvey Norman, one of Australia’s largest and most recognized retail brands, I served as a Senior Frontend Engineer, tackling the ambitious migration of their eCommerce platform from a legacy PHP-based monolithic structure to a robust, headless architecture. The new system was built on Magento and integrated cutting-edge technologies including GraphQL, React, and Next.js, creating a scalable and performance-driven solution capable of supporting Harvey Norman’s high-traffic, multi-brand presence across Australia.",

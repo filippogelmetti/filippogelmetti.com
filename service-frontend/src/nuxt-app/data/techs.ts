@@ -106,6 +106,11 @@ export const techs: HashTableTechs<Tech> = {
     name: "javascript",
     icon: "javascript.svg",
   },
+  jest: {
+    id: TechId.jest,
+    name: "jest",
+    icon: "jest.svg",
+  },
   jquery: {
     id: TechId.jquery,
     name: "jquery",

@@ -17,6 +17,7 @@ export enum TechId {
   googleDevelopers = "googleDevelopers",
   graphql = "graphql",
   gsapGreensock = "gsapGreensock",
+  jest = "jest",
   java = "java",
   javascript = "javascript",
   jquery = "jquery",
