@@ -89,7 +89,7 @@ const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
         <div class="col-right">
           <div
             class="slot"
-            *ngIf="project.url"
+            v-if="portfolioItem.url"
           >
             <div class="label">Live Url</div>
             <div class="value-highlight">
