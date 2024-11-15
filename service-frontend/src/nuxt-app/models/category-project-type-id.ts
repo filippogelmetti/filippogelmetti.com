@@ -1,4 +1,5 @@
 export enum CategoriesProjectTypeId {
+  desktopApp = "desktopApp",
   widget = "widget",
   fullStack = "fullStack",
   frontend = "frontend",
