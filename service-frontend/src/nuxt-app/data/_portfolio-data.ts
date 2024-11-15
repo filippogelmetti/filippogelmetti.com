@@ -397,25 +397,27 @@ export const portfolioData: Portfolio[] = [
     urlWebArchive:
       "http://web.archive.org/web/20180205192734/https://booksgiftsdirect.com/",
     description: [
-      "The client had an existing website built with Drupal and wanted to restyle and add an e-commerce section.",
-      "The technical challenge was to integrate Drupal with an external system connected with the wharehouse which was sending the data relative to the products (with pricing, images, stock availability ...)",
-      "An interesting part was to find a way to automatically optimize the image size and quality for each specific part of the website.",
+      "Books and Gifts Direct is a unique Australian retailer, known for its office-based distribution model where product boxes are placed in workplaces, allowing employees to browse and order products on-site. This offline model was a key part of their business, but to expand their reach and provide a more convenient shopping option, they decided to take their business online with the launch of their first-ever e-commerce website.",
+      "The project involved building a new online platform using Drupal to create an e-commerce solution that mirrored their existing in-office shopping experience. The main technical challenge was integrating the Drupal backend with their .NET-based warehouse system, which managed product data like pricing, stock levels, and images. This integration was crucial for ensuring that product details were updated in real-time, providing customers with accurate information while shopping online.",
+      "A custom integration was developed to link Drupal with the warehouse system through APIs, enabling seamless updates of product prices, stock availability, and images directly from the warehouse to the website. A cron job was implemented to automate data syncing and ensure the catalog was always up-to-date. Additionally, the website incorporated an image optimization system to automatically adjust image quality and size based on the type of page, enhancing site performance and user experience.",
+      "The end result was a fully functional, responsive e-commerce website that allowed Books and Gifts Direct to offer their products online for the first time, efficiently managing product data while ensuring a smooth, enjoyable shopping experience for their customers. This solution successfully combined the flexibility of Drupal with the real-time capabilities of the .NET warehouse system, enabling seamless operation for the client and opening a new digital sales channel for their business.",
     ],
     shortDescription:
-      "Redesign and add e-commerce functionality to a Drupal site, including integration with an external warehouse system.",
+      "First e-commerce website for Books and Gifts Direct, integrating Drupal with an external .NET warehouse system for real-time product data management.",
     keyFeatures: [
-      "Integration with wharehouse",
-      "Smart images optimization",
-      "Product gallery",
-      "Cron job to import/update products",
+      "Integration with .NET warehouse system for real-time updates",
+      "Automated image optimization",
+      "Product gallery and secure e-commerce",
+      "Cron job for regular product sync",
     ],
     skillsLearned: [
       "Advanced Drupal setup",
-      "Pixel perfect design",
+      "Pixel-perfect design",
       "E-commerce payments",
-      "Integration with third party API",
+      "Integration with third-party APIs",
     ],
   },
+
   {
     slug: "cocklebaywharf-website",
     name: "Cocklebaywharf - Website",
