@@ -40,7 +40,7 @@ const portfolio = usePortfolio();
               />
             </span>
           </div>
-          <button class="view-more">View More</button>
+          <button class="view-more">Read More</button>
         </a>
       </div>
     </div>

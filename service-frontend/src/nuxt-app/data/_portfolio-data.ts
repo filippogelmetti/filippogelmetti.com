@@ -3,6 +3,7 @@ import { awards } from "./awards";
 import { clients } from "./clients";
 import { countries } from "./countries";
 import { techs } from "./techs";
+import { categoriesProjectType } from "./categories-project-type";
 
 /**
  * Missing ones:
@@ -15,6 +16,12 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "harvey-norman-headless-ecommerce-migration",
     name: "Harvey Norman Headless eCommerce Migration",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.ecommerce,
+      categoriesProjectType.headless,
+      categoriesProjectType.frontend,
+    ],
     date: new Date("2022-05"),
     nrOfScreenshots: 16,
     subDirPathName: "2024-04-xx harvey norman",
@@ -68,6 +75,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "anzip-website",
     name: "Anzip - Website",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.headless,
+      categoriesProjectType.frontend,
+    ],
     date: new Date("2020-03"),
     client: clients.ipa,
     nrOfScreenshots: 4,
@@ -108,6 +120,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "infraflix-video-streaming-platform",
     name: "Infraflix - Video streaming platform",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.videoStreaming,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2020-02"),
     client: clients.ipa,
     nrOfScreenshots: 3,
@@ -143,6 +160,12 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "crown-furniture-website",
     name: "Crown furniture - Website",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+      categoriesProjectType.headless,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2020-01"),
     client: clients.ipa,
     nrOfScreenshots: 4,
@@ -184,6 +207,12 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "lion-b2b-platform",
     name: "Lion - B2B platform",
+    categoriesProjectType: [
+      categoriesProjectType.b2bPlatform,
+      categoriesProjectType.customAdminPanel,
+      categoriesProjectType.corporateWebsite,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2019-01"),
     client: clients.lion,
     nrOfScreenshots: 4,
@@ -215,6 +244,12 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "kanso-headless-frontend",
     name: "Kanso - Headless Frontend",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+      categoriesProjectType.headless,
+      categoriesProjectType.frontend,
+    ],
     date: new Date("2019-01"),
     client: clients.dorf,
     nrOfScreenshots: 4,
@@ -246,6 +281,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "cubelite-b2b-platform",
     name: "Cubelite - B2b platform",
+    categoriesProjectType: [
+      categoriesProjectType.b2bPlatform,
+      categoriesProjectType.corporateWebsite,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2019-01"),
     client: clients.cub,
     nrOfScreenshots: 4,
@@ -286,6 +326,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "anzduo-b2b-platform",
     name: "Anzduo - B2B Platform",
+    categoriesProjectType: [
+      categoriesProjectType.b2bPlatform,
+      categoriesProjectType.api,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2019-01"),
     client: clients.airnz,
     nrOfScreenshots: 4,
@@ -326,6 +371,10 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "argyle-tender-widget",
     name: "Argyle tender - Widget",
+    categoriesProjectType: [
+      categoriesProjectType.widget,
+      categoriesProjectType.headless,
+    ],
     date: new Date("2018-08"),
     client: clients.argyle,
     nrOfScreenshots: 3,
