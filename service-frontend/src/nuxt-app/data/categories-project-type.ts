@@ -7,6 +7,11 @@ type HashTableCategoriesProjectType<T> = {
 
 export const categoriesProjectType: HashTableCategoriesProjectType<CategoryProjectType> =
   {
+    desktopApp: {
+      id: CategoriesProjectTypeId.desktopApp,
+      icon: "",
+      name: "Desktop App",
+    },
     widget: {
       id: CategoriesProjectTypeId.widget,
       icon: "",

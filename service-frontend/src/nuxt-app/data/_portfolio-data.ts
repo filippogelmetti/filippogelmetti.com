@@ -405,7 +405,12 @@ export const portfolioData: Portfolio[] = [
 
   {
     slug: "lark-wordpress-ecommerce-plugin",
-    name: "Lark - Wordpress eCommerce plugin",
+    name: "Lark",
+    categoriesProjectType: [
+      categoriesProjectType.cms,
+      categoriesProjectType.ecommerce,
+      categoriesProjectType.plugin,
+    ],
     date: new Date("2018-01"),
     client: clients.lark,
     nrOfScreenshots: 3,
@@ -437,8 +442,12 @@ export const portfolioData: Portfolio[] = [
     ],
   },
   {
-    slug: "beerenberg-website-maintenance",
-    name: "Beerenberg  maintenance",
+    slug: "beerenberg-website",
+    name: "Beerenberg",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.ecommerce,
+    ],
     date: new Date("2017-06"),
     client: clients.beerenbe,
     nrOfScreenshots: 4,
@@ -473,7 +482,11 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "books-and-gifts-direct-ecommerce",
-    name: "Books and Gifts Direct - Ecommerce",
+    name: "Books and Gifts Direct",
+    categoriesProjectType: [
+      categoriesProjectType.ecommerce,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2016-08"),
     client: clients.booksandgifts,
     nrOfScreenshots: 4,
@@ -506,7 +519,11 @@ export const portfolioData: Portfolio[] = [
 
   {
     slug: "cocklebaywharf-website",
-    name: "Cocklebaywharf ",
+    name: "Cocklebaywharf",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2016-04"),
     url: "https://www.cocklebaywharf.com.au",
     client: clients.cocklebay,
@@ -538,7 +555,11 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "argyle-pink-diamonds-website",
-    name: "Argyle Pink Diamonds ",
+    name: "Argyle Pink Diamonds",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2016-04"),
     client: clients.argyle,
     nrOfScreenshots: 4,
@@ -576,7 +597,11 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "tinyhunter-website",
-    name: "Tinyhunter ",
+    name: "Tinyhunter",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2015-01"),
     client: clients.tinyhunter,
     nrOfScreenshots: 4,
@@ -609,6 +634,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "sydney-airport-leasing-website",
     name: "Sydney Airport Leasing Website",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.fullStack,
+      categoriesProjectType.customIntegration,
+    ],
     date: new Date("2015-01"),
     client: clients.sydneyairport,
     nrOfScreenshots: 4,
@@ -641,6 +671,10 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "college-of-management-events",
     name: "College of Management Events",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2015-04"),
     client: clients.coem,
     nrOfScreenshots: 3,
@@ -668,6 +702,10 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "playsafe-nsw-drupal-gov-website",
     name: "Playsafe",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2014-06"),
     client: clients.healthnsw,
     nrOfScreenshots: 4,
@@ -705,6 +743,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "diageo-rewards-platform",
     name: "D-Rewards",
+    categoriesProjectType: [
+      categoriesProjectType.corporateWebsite,
+      categoriesProjectType.b2bPlatform,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2014-01"),
     client: clients.diageo,
     nrOfScreenshots: 4,
@@ -738,6 +781,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "diageo-promotion-b2b-platform",
     name: "Diageo Promotions",
+    categoriesProjectType: [
+      categoriesProjectType.corporateWebsite,
+      categoriesProjectType.b2bPlatform,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2013-04"),
     urlWebArchive:
       "https://web.archive.org/web/20190302213949/http://diageopromotions.com.au/site/index",
@@ -770,6 +818,7 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "westinghouse-solar-website",
     name: "Westinghouse Solar ",
+    categoriesProjectType: [categoriesProjectType.website],
     date: new Date("2013-04"),
     urlWebArchive:
       "http://web.archive.org/web/20130731105328/http://westinghousesolar.com.au/",
@@ -798,6 +847,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "diageo-b2b-platform",
     name: "Diageo Trade Solutions",
+    categoriesProjectType: [
+      categoriesProjectType.b2bPlatform,
+      categoriesProjectType.customIntegration,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2013-01"),
     client: clients.diageo,
     nrOfScreenshots: 4,
@@ -835,6 +889,10 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "shillington-college-website",
     name: "Shillington College",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.cms,
+    ],
     date: new Date("2012-10"),
     client: clients.shillo,
     nrOfScreenshots: 5,
@@ -865,6 +923,10 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "ocr-computer-vision-thesis",
     name: "Ocr",
+    categoriesProjectType: [
+      categoriesProjectType.computerVision,
+      categoriesProjectType.desktopApp,
+    ],
     date: new Date("2012-07"),
     nrOfScreenshots: 9,
     subDirPathName: "2012-07-xx tesi ocr",
@@ -896,6 +958,10 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "3d-engine-opengl",
     name: "3d engine",
+    categoriesProjectType: [
+      categoriesProjectType.computerVision,
+      categoriesProjectType.desktopApp,
+    ],
     date: new Date("2012-02"),
     nrOfScreenshots: 3,
     subDirPathName: "2012-02-xx 3d engine",
@@ -924,6 +990,10 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "3d-photomosaic-computer-vision",
     name: "3d Photomosaic",
+    categoriesProjectType: [
+      categoriesProjectType.computerVision,
+      categoriesProjectType.desktopApp,
+    ],
     date: new Date("2012-01"),
     nrOfScreenshots: 6,
     subDirPathName: "2012-01-xx 3d photomosaic",
@@ -952,6 +1022,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "orange-mail-email-marketing-platform",
     name: "Orange Mail",
+    categoriesProjectType: [
+      categoriesProjectType.emailMarketingTool,
+      categoriesProjectType.customAdminPanel,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2010-11"),
     nrOfScreenshots: 4,
     subDirPathName: "2010-11-xx orange mail",
@@ -995,6 +1070,11 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "manifattura-email-marketing-platform-crawler",
     name: "Manifattura",
+    categoriesProjectType: [
+      categoriesProjectType.emailMarketingTool,
+      categoriesProjectType.customAdminPanel,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2010-09"),
     nrOfScreenshots: 4,
     subDirPathName: "2010-09-xx manifattura",
@@ -1035,6 +1115,12 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "diomira-travel-symfony-website",
     name: "Diomira Travel",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.customAdminPanel,
+      categoriesProjectType.emailMarketingTool,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2010-09"),
     nrOfScreenshots: 4,
     urlWebArchive:
@@ -1083,7 +1169,13 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "carrozzeria-casella-symfony-website",
-    name: "Carrozzeria Casella ",
+    name: "Carrozzeria Casella",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.customAdminPanel,
+      categoriesProjectType.emailMarketingTool,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2010-05"),
     nrOfScreenshots: 4,
     urlWebArchive:
@@ -1122,7 +1214,12 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "air-silent-italia-symfony-website",
-    name: "Air Silent Italia ",
+    name: "Air Silent Italia",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.customAdminPanel,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2009-01"),
     client: clients.airsilent,
     urlWebArchive:
@@ -1160,7 +1257,12 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "colombo-arredamenti-website",
-    name: "Colombo Arredamenti ",
+    name: "Colombo Arredamenti",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.customAdminPanel,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2008-12"),
     nrOfScreenshots: 4,
     subDirPathName: "2008-12-xx colomboarredamenti",
@@ -1195,7 +1297,11 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "123vai-interactive-widget",
-    name: "123Vai - Interactive Widget",
+    name: "123Vai",
+    categoriesProjectType: [
+      categoriesProjectType.widget,
+      categoriesProjectType.customIntegration,
+    ],
     date: new Date("2008-08"),
     nrOfScreenshots: 1,
     subDirPathName: "2008-08-xx 123vai",
@@ -1222,7 +1328,12 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "tty-creo-insurance-web-application",
-    name: "Tty Creo - Web applications for insurance industry",
+    name: "Tty Creo",
+    categoriesProjectType: [
+      categoriesProjectType.b2bPlatform,
+      categoriesProjectType.customIntegration,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2008-01"),
     client: clients.tty,
     nrOfScreenshots: 4,
@@ -1267,7 +1378,12 @@ export const portfolioData: Portfolio[] = [
   },
   {
     slug: "blog-wedding",
-    name: "Blog di Nozze - Wedding Gifts Booking System and Blog",
+    name: "Blog di Nozze",
+    categoriesProjectType: [
+      categoriesProjectType.website,
+      categoriesProjectType.customIntegration,
+      categoriesProjectType.fullStack,
+    ],
     date: new Date("2007-07"),
     nrOfScreenshots: 4,
     subDirPathName: "2007-07-xx nozze",
