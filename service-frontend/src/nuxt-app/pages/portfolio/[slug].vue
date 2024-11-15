@@ -198,7 +198,7 @@ const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
                 target="_blank"
               >
                 <img
-                  :src="`/assets/portfolio-images/awards/${portfolioItem.award.screenshot}`"
+                  :src="`/portfolio-images/awards/${portfolioItem.award.screenshot}`"
                   alt=""
                 />
               </a>
