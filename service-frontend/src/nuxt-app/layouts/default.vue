@@ -1,17 +1,11 @@
+<style src="./layout-default.scss" />
+
 <template>
   <div>
-    <header>
-      <NuxtLink :to="`/`"> HOME </NuxtLink>
-      <NuxtLink :to="`/portfolio`"> PORTFOLIO </NuxtLink>
-      <NuxtLink :to="`/about`"> ABOUT </NuxtLink>
-    </header>
-
-    <NuxtPage />
-
-    <footer>
-      <p>&copy; 2024 Filippo Gelmetti</p>
-    </footer>
+    <Navigation />
+    <div class="main-page-wrapper">
+      <NuxtPage />
+    </div>
+    <Footer />
   </div>
 </template>
-
-<style src="./default.scss" />
