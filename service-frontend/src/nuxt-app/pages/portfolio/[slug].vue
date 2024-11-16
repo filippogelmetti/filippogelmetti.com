@@ -96,7 +96,6 @@ const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
               <a
                 :href="`${portfolioItem.url}`"
                 target="_blank"
-                class="card-content"
               >
                 {{ portfolioItem.url }}
               </a>

@@ -151,12 +151,15 @@
           color: black;
         }
         ul {
+          padding: 0;
           list-style: none;
           li {
             display: flex;
             align-items: center;
             justify-content: left;
             text-transform: capitalize;
+            line-height: 26px;
+            margin-bottom: 15px;
           }
           li::before {
             content: "\2022";
