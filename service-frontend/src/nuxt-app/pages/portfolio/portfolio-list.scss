@@ -1,24 +1,28 @@
 .portfolio-container {
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  position: relative;
 }
 
 .portfolio-card {
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Start from bottom */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Fade in and slide up */
+  will-change: transform, opacity; /* Hint to browser for optimization */
 }
 
-.portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+.portfolio-card.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide up to normal position */
 }
 
 .card-content {
@@ -43,7 +47,7 @@ h2 {
 .category-tag-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px; /* Space between tags */
+  gap: 8px;
 }
 
 .category-tag {

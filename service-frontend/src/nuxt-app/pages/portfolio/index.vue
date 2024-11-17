@@ -1,6 +1,25 @@
 <script setup lang="ts">
 import { usePortfolio } from "~/composables/usePortfolio";
+import { onMounted, ref } from "vue";
+
 const portfolio = usePortfolio();
+const portfolioCards = ref<HTMLDivElement[]>([]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const card = entry.target as HTMLElement;
+          card.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  portfolioCards.value.forEach((card) => observer.observe(card));
+});
 </script>
 
 <style src="./portfolio-list.scss" />
@@ -8,9 +27,11 @@ const portfolio = usePortfolio();
   <div class="portfolio-container">
     <div class="grid">
       <div
-        v-for="item in portfolio"
+        v-for="(item, index) in portfolio"
         :key="item.slug"
         class="portfolio-card"
+        ref="portfolioCards"
+        :style="{ transitionDelay: `${0.2 + Math.random() * 0.8}s` }"
       >
         <a
           :href="`/portfolio/${item.slug}`"
