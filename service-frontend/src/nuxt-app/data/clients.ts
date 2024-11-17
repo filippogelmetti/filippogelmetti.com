@@ -15,7 +15,7 @@ export const clients: HashTableClients<Client> = {
   ipa: {
     id: ClientId.ipa,
     name: "Infrastructure Partnership Australia",
-    logo: "anzip.png",
+    logo: "anzip.svg",
     websiteUrl: "https://infrastructure.org.au",
   },
   crown: {
@@ -51,7 +51,7 @@ export const clients: HashTableClients<Client> = {
   airnz: {
     id: ClientId.airnz,
     name: "Air New Zealand",
-    logo: "airnz.png",
+    logo: "air-new-zealand.svg",
     websiteUrl: "https://www.airnewzealand.com.au",
   },
   argyle: {
@@ -81,7 +81,7 @@ export const clients: HashTableClients<Client> = {
   cocklebay: {
     id: ClientId.cocklebay,
     name: "Cockle Bay Wharf",
-    logo: "cocklebay.png",
+    logo: "cocklebay.svg",
     websiteUrl: "https://www.cocklebaywharf.com.au",
   },
   tinyhunter: {
@@ -123,13 +123,13 @@ export const clients: HashTableClients<Client> = {
   airsilent: {
     id: ClientId.airsilent,
     name: "Air Silent Italia",
-    logo: "airsilent.jpg",
+    logo: "airsilent.svg",
     websiteUrl: "",
   },
   moelca: {
     id: ClientId.moelca,
     name: "Moelca",
-    logo: "moelca.png",
+    logo: "moelca.svg",
     websiteUrl: "http://www.moelca.it",
   },
 };

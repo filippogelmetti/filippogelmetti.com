@@ -1,5 +1,8 @@
 .navigation {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Optional, adds space between items */
   top: 0;
   width: 100%;
   font-size: 20px;
