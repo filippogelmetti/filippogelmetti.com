@@ -6,7 +6,6 @@ const portfolio = usePortfolio();
 <style src="./portfolio-list.scss" />
 <template>
   <div class="portfolio-container">
-    <h1>Portfolio Projects</h1>
     <div class="grid">
       <div
         v-for="item in portfolio"

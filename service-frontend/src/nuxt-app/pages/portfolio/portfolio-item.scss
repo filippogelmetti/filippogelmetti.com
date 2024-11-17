@@ -193,6 +193,11 @@
           .slot-item-list:first-letter {
             text-transform: capitalize;
           }
+          .client-logo-container {
+            img {
+              width: 100%;
+            }
+          }
         }
       }
     }

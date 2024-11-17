@@ -18,6 +18,7 @@ export const portfolioData: Portfolio[] = [
   {
     slug: "harvey-norman-headless-ecommerce-migration",
     name: "Harvey Norman",
+    client: clients.harveynorman,
     categoriesProjectType: [
       categoriesProjectType.website,
       categoriesProjectType.ecommerce,
@@ -171,7 +172,7 @@ export const portfolioData: Portfolio[] = [
       categoriesProjectType.fullStack,
     ],
     date: new Date("2020-01"),
-    client: clients.ipa,
+    client: clients.crown,
     nrOfScreenshots: 4,
     subDirPathName: "2020-01-xx crownfurniture",
     country: countries.aus,

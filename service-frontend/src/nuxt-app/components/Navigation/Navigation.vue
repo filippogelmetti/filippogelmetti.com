@@ -20,10 +20,42 @@
     </div>
     <div class="nav-tab">
       <NuxtLink
-        :to="`/about`"
+        :to="`/services`"
         active-class="active-nav-tab"
       >
-        ABOUT
+        SERVICES
+      </NuxtLink>
+    </div>
+    <div class="nav-tab">
+      <NuxtLink
+        :to="`/clients`"
+        active-class="active-nav-tab"
+      >
+        CLIENTS
+      </NuxtLink>
+    </div>
+    <div class="nav-tab">
+      <NuxtLink
+        :to="`/honors`"
+        active-class="active-nav-tab"
+      >
+        HONORS
+      </NuxtLink>
+    </div>
+    <div class="nav-tab">
+      <NuxtLink
+        :to="`/blog`"
+        active-class="active-nav-tab"
+      >
+        BLOG
+      </NuxtLink>
+    </div>
+    <div class="nav-tab">
+      <NuxtLink
+        :to="`/contact`"
+        active-class="active-nav-tab"
+      >
+        CONTACT
       </NuxtLink>
     </div>
   </header>

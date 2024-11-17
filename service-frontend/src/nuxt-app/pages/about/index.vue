@@ -1,78 +1,69 @@
 <template>
   <div class="about-wrapper padded-default">
     <p class="padded-after">
-      Full stack web developer with over a decade of experience in building
-      applications and websites for the industry both in Europe and Australia. I
-      have used php technologies for a great part of my career (php frameworks,
-      CMS, ecommerce), I am now working with the latest frontend technologies as
-      well (React, Vue, Graphql). I also have special knowledge in the field of
-      computer vision with my master degree and personal projects. I have much
-      passion and motivation for my work which I consider an art.
+      Hi there! I’m Filippo Alberto Gelmetti, a seasoned Full Stack Web
+      Developer and Computer Vision enthusiast with over 20 years of experience
+      transforming ideas into powerful digital solutions.
     </p>
 
-    <h2 class="padded-after">Skills</h2>
+    <h2 class="padded-after">The Blanck Canvas Life 🌊</h2>
     <p class="padded-after">
-      Full stack web development: Clean Architecture, TDD, CI/CD,
-      React/Vuejs/Angular, Php, Nodejs, Typescript, Sql, Css, GraphQL
-    </p>
-    <p class="padded-after">
-      Image processing: Segmentation, Edge detection, OCR, Convolutional Neural
-      Network
+      I live on the stunning Central Coast of Australia, where surfing fuels my
+      creativity and energy for problem-solving. There's something about
+      catching waves that mirrors my passion for building clean, innovative, and
+      efficient code — every project is a fresh wave to ride.
     </p>
 
-    <h2 class="padded-after">Education</h2>
-
-    <h3 class="padded-after">Master degree computer science</h3>
+    <h2 class="padded-after">My Journey 🚀</h2>
     <p class="padded-after">
-      Master degree in computer science, “Università di Milano Bicocca” with
-      specialization in Image Processing. The final thesis is: "Image processing
-      techniques applied to an OCR system" prof. Raimondo Schettini – cor.
-      Alberto Roli
+      From developing award-winning websites in Italy to leading groundbreaking
+      projects for major Australian brands, my career has been a blend of art,
+      engineering, and innovation. With a Master’s degree in Computer Science
+      from the University of Milan-Bicocca, I’ve combined academic rigor with
+      hands-on expertise to master a vast array of technologies.
+    </p>
+    <p class="padded-after">
+      Whether it’s modern frameworks like React, Angular, or Next.js, backend
+      wizardry with Node.js and Symfony, or AI-powered computer vision systems,
+      I thrive on tackling challenges with precision and creativity.
     </p>
 
-    <h3 class="padded-after">Bachelor degree computer science</h3>
-    <p class="padded-after">
-      Bachelor degree in computer science, “Università di Milano Bicocca” with
-      specialization in System Development. The final thesis: "Symbolic
-      execution of object oriented languages in presence of aliasing" prof.
-      Mauro Pezzè - cor. Giovanni Denaro
-    </p>
+    <h2 class="padded-after">What I Do Best ✨</h2>
 
-    <h2 class="padded-after">Awards</h2>
+    <ul>
+      <li>
+        <p class="padded-after">
+          Frontend & Backend Development: From high-performance eCommerce
+          platforms to custom admin panels and pixel-perfect designs.
+        </p>
+      </li>
+      <li>
+        <p class="padded-after">
+          AI & Computer Vision: Crafting intelligent systems with deep learning,
+          object detection, and real-time video processing.
+        </p>
+      </li>
+      <li>
+        <p class="padded-after">
+          Headless Architectures: Building scalable, lightning-fast solutions
+          for complex requirements.
+        </p>
+      </li>
+      <li>
+        <p class="padded-after">
+          Agile & Innovation: Turning visions into reality while adopting
+          cutting-edge tools and methodologies.
+        </p>
+      </li>
+    </ul>
 
+    <h2 class="padded-after">Why Work with Me? 🤝</h2>
     <p class="padded-after">
-      Best in class - RetailAwarded March 2017 by Interactive Media Council
-      Award for the website Cockle Bay Wharf.
-      <br />
-      <a
-        href="http://interactivemediaawards.com/winners/certificate.asp?param=761936&cat=1"
-      >
-        Open award
-      </a>
-    </p>
-
-    <p class="padded-after">
-      Best in class - MarketingAwarded January 2014 by Interactive Media Council
-      Award for the website Tinyhunter.
-      <br />
-      <a
-        href="http://interactivemediaawards.com/winners/certificate.asp?param=291388&cat=1"
-      >
-        Open award
-      </a>
-    </p>
-
-    <p class="padded-after">
-      Best in class - EducationAwarded November 2012 by Interactive Media
-      Council - Award for the website Play Safe - Ministry of health New South
-      Wales. I built this website with Drupal and applying WCAG standards. I
-      scored 100/100 on the functionality section.
-      <br />
-      <a
-        href="http://interactivemediaawards.com/winners/certificate.asp?param=287279&cat=1"
-      >
-        Open award
-      </a>
+      I’m not just about writing code; I’m about crafting solutions that matter.
+      I approach every project with the dedication and precision that surfing
+      taught me: balance, adaptability, and commitment to excellence. Plus, my
+      Italian-Australian roots give me a unique perspective on blending
+      functionality with flair.
     </p>
   </div>
 </template>

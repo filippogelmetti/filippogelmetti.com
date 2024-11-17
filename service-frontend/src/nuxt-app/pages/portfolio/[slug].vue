@@ -89,6 +89,18 @@ const portfolioItem = portfolio.find((item) => item.slug === route.params.slug);
         <div class="col-right">
           <div
             class="slot"
+            v-if="portfolioItem?.client?.logo"
+          >
+            <div class="value-highlight client-logo-container">
+              <img
+                :src="`/portfolio-images/clients-logos/${portfolioItem?.client?.logo}`"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div
+            class="slot"
             v-if="portfolioItem.url"
           >
             <div class="label">Live Url</div>

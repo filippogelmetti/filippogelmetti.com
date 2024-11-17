@@ -18,5 +18,6 @@ export enum ClientId {
   shillo = "shillo",
   airsilent = "airsilent",
   moelca = "moelca",
-  tty = "tty"
+  tty = "tty",
+  harveynorman = "harveynorman",
 }
