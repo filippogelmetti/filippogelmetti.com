@@ -1,5 +1,5 @@
 import type { Portfolio } from "~/models/portfolio";
-import { awards } from "./awards";
+import { awards } from "./certificates-awards";
 import { clients } from "./clients";
 import { countries } from "./countries";
 import { techs } from "./techs";
