@@ -99,19 +99,19 @@ export const clients: HashTableClients<Client> = {
   coem: {
     id: ClientId.coem,
     name: "College of Event Management",
-    logo: "coem.png",
+    logo: "coem.svg",
     websiteUrl: "https://collegeofeventmanagement.edu.au",
   },
   healthnsw: {
     id: ClientId.healthnsw,
     name: "Health NSW",
-    logo: "nswhealth.png",
+    logo: "nswhealth.svg",
     websiteUrl: "https://www.health.nsw.gov.au",
   },
   shillo: {
     id: ClientId.shillo,
     name: "Shillington College",
-    logo: "shillington.png",
+    logo: "shillington.svg",
     websiteUrl: "https://www.shillingtoneducation.com",
   },
   tty: {

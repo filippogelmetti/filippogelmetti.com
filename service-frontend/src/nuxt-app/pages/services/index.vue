@@ -12,6 +12,7 @@
         <!-- Type of Projects -->
         <div class="service-category">
           <h2 class="category-title">Type of Projects</h2>
+          <hr />
           <ul class="service-list">
             <li>Web applications</li>
             <li>B2B platforms</li>
@@ -26,6 +27,7 @@
         <!-- Frontend Services -->
         <div class="service-category">
           <h2 class="category-title">Frontend</h2>
+          <hr />
           <ul class="service-list">
             <li>UX focused interfaces</li>
             <li>Email marketing tools</li>
@@ -45,6 +47,7 @@
         <!-- Backend Services -->
         <div class="service-category">
           <h2 class="category-title">Backend</h2>
+          <hr />
           <ul class="service-list">
             <li>API development (RESTful and GraphQL)</li>
             <li>Database integration (MySQL, PostgreSQL)</li>
@@ -60,6 +63,7 @@
         <!-- Process -->
         <div class="service-category">
           <h2 class="category-title">Process</h2>
+          <hr />
           <ul class="service-list">
             <li>Requirement analysis</li>
             <li>Quoting</li>
@@ -75,6 +79,7 @@
         <!-- Engineering -->
         <div class="service-category">
           <h2 class="category-title">Engineering</h2>
+          <hr />
           <ul class="service-list">
             <li>Clean architecture</li>
             <li>TDD, Unit tests & E2E tests</li>
@@ -86,6 +91,7 @@
         <!-- AI & Computer Vision -->
         <div class="service-category">
           <h2 class="category-title">AI & Computer Vision</h2>
+          <hr />
           <ul class="service-list">
             <li>Classic Image Processing Algorithms</li>
             <li>Deep neural networks, CNN</li>
@@ -138,7 +144,6 @@
 .service-category {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
