@@ -27,19 +27,19 @@ export const clients: HashTableClients<Client> = {
   lion: {
     id: ClientId.lion,
     name: "Lion",
-    logo: "lion.png",
+    logo: "lion.svg",
     websiteUrl: "https://lionco.com",
   },
   diageo: {
     id: ClientId.diageo,
     name: "Diageo",
-    logo: "diageo.png",
+    logo: "diageo.svg",
     websiteUrl: "https://diageo.com.au",
   },
   dorf: {
     id: ClientId.dorf,
     name: "Dorf",
-    logo: "dorf.png",
+    logo: "dorf.svg",
     websiteUrl: "https://www.dorf.com.au",
   },
   cub: {
@@ -63,19 +63,19 @@ export const clients: HashTableClients<Client> = {
   lark: {
     id: ClientId.lark,
     name: "Lark",
-    logo: "lark.png",
+    logo: "lark.svg",
     websiteUrl: "https://larkdistillery.com",
   },
   beerenbe: {
     id: ClientId.beerenbe,
     name: "Beerenberg",
-    logo: "beerenberg.png",
+    logo: "beerenberg.svg",
     websiteUrl: "https://beerenberg.com.au",
   },
   booksandgifts: {
     id: ClientId.booksandgifts,
     name: "Books & Gifts Direct",
-    logo: "bagd.png",
+    logo: "bagd.svg",
     websiteUrl: "https://booksgiftsdirect.com",
   },
   cocklebay: {
@@ -87,13 +87,13 @@ export const clients: HashTableClients<Client> = {
   tinyhunter: {
     id: ClientId.tinyhunter,
     name: "Tiny Hunter",
-    logo: "tinyhunter.png",
+    logo: "tinyhunter.svg",
     websiteUrl: "https://tinyhunter.com.au",
   },
   sydneyairport: {
     id: ClientId.sydneyairport,
     name: "Sydney Airport",
-    logo: "sydney-airport.png",
+    logo: "sydney-airport.svg",
     websiteUrl: "https://www.sydneyairport.com.au",
   },
   coem: {
@@ -117,7 +117,7 @@ export const clients: HashTableClients<Client> = {
   tty: {
     id: ClientId.tty,
     name: "TTY Creo",
-    logo: "tty.png",
+    logo: "tty.svg",
     websiteUrl: "https://www.ttycreo.it",
   },
   airsilent: {

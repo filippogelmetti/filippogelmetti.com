@@ -74,11 +74,15 @@ onMounted(() => {
 
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* Ensure exactly 4 columns */
+  gap: 20px; /* Adjust spacing between grid items */
 }
 
 .client-tile {
+  display: flex; /* Use flexbox for vertical centering */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Horizontally center content */
+  justify-content: center; /* Vertically center content */
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -99,14 +103,14 @@ onMounted(() => {
 .client-logo {
   width: 100%;
   height: auto;
-  max-width: 120px;
+  max-width: 200px;
   margin: 0 auto;
   display: block;
 }
 
 .client-name {
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 14px;
   color: #555;
 }
 </style>
