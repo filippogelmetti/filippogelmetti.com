@@ -7,6 +7,11 @@
         :key="certificate.degree"
       >
         <div class="certificate-item">
+          <img
+            :src="`/certificates/academic/${certificate.image}`"
+            alt=""
+            width="400"
+          />
           <p>
             <strong>{{ certificate.degree }}</strong>
           </p>

@@ -25,9 +25,14 @@ export default defineComponent({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <strong>{{ certificate.name }}</strong> -
-          <em>{{ certificate.date }}</em>
+          <img
+            :src="`/certificates/online/${certificate.image}`"
+            alt=""
+            width="200"
+          />
         </a>
+        <strong>{{ certificate.name }}</strong> -
+        <em>{{ certificate.date }}</em>
       </li>
     </ul>
   </div>

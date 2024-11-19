@@ -13,10 +13,11 @@
         >
           <div class="award-item">
             <img
-              v-if="award.screenshot"
-              :src="`/images/${award.screenshot}`"
+              v-if="award.image"
+              :src="`/certificates/awards/${award.image}`"
               :alt="award.id"
               class="award-screenshot"
+              width="200"
             />
             <div>
               <p>
@@ -78,7 +79,7 @@ li {
 }
 
 .award-screenshot {
-  width: 100px;
+  width: 200px;
   height: auto;
   border: 1px solid #ddd;
   border-radius: 4px;
