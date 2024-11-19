@@ -1,3 +1,28 @@
+<script setup lang="ts">
+import { clients } from "~~/layers/data/clients";
+
+// Prepare the client list for use
+const clientList = Object.values(clients);
+
+// Set up intersection observer for animations
+const clientTiles = ref([]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  clientTiles.value.forEach((tile) => observer.observe(tile));
+});
+</script>
+
 <template>
   <section class="clients-wrapper">
     <div class="container">
@@ -27,31 +52,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import { clients } from "~/data/clients";
-
-// Prepare the client list for use
-const clientList = Object.values(clients);
-
-// Set up intersection observer for animations
-const clientTiles = ref([]);
-
-onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  clientTiles.value.forEach((tile) => observer.observe(tile));
-});
-</script>
 
 <style>
 .clients-wrapper {

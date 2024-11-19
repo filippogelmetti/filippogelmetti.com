@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { certificatesOnline } from "~/data/certificates-online"; // Adjust path as needed
+import { certificatesOnline } from "~~/layers/data/certificates-online"; // Adjust path as needed
 
 export default defineComponent({
   name: "CertificatesOnline",

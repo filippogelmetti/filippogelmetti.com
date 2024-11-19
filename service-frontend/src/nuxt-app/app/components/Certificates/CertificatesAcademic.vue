@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { academicCertificates } from "~/data/certificates-academic";
+import { academicCertificates } from "~~/layers/data/certificates-academic";
 
 export default defineComponent({
   name: "CertificatesAcademic",

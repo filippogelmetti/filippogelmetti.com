@@ -1,1 +1,0 @@
-export {portfolioData} from "./showportfolio"

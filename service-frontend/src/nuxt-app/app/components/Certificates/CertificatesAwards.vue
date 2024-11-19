@@ -35,8 +35,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { awards } from "~/data/certificates-awards";
-import type { Award } from "~/models/award";
+import { awards } from "~~/layers/data/certificates-awards";
+import type { Award } from "~~/layers/models/award";
 
 export default defineComponent({
   name: "CertificateAwards",
