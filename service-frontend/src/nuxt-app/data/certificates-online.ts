@@ -1,7 +1,7 @@
 // Define the shape of an online certificate
 export interface CertificateOnline {
   name: string;
-  date: string; // Format: "MMM YYYY"
+  date: string;
   url: string;
   image: string;
 }
