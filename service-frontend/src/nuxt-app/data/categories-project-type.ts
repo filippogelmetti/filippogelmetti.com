@@ -1,5 +1,5 @@
-import type { CategoryProjectType } from "~~/layers/models/category-project-type";
-import { CategoriesProjectTypeId } from "~~/layers/models/category-project-type-id";
+import type { CategoryProjectType } from "@@/domain/models/category-project-type";
+import { CategoriesProjectTypeId } from "@@/domain/models/category-project-type-id";
 
 type HashTableCategoriesProjectType<T> = {
   [key in CategoriesProjectTypeId]: T;

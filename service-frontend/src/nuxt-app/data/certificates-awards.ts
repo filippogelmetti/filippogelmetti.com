@@ -1,5 +1,5 @@
-import type { Award } from "~~/layers/models/award";
-import { AwardId } from "~~/layers/models/award-id";
+import type { Award } from "@@/domain/models/award";
+import { AwardId } from "@@/domain/models/award-id";
 
 type HashTableAwards<T> = {
   [key in AwardId]: T;

@@ -1,5 +1,5 @@
-import { portfolioData } from "~~/layers/data/_portfolio-data";
+import { portfolioData } from "@@/data/_portfolio-data";
 
-export function usePortfolio() {
+export const usePortfolio = () => {
   return portfolioData;
-}
+};

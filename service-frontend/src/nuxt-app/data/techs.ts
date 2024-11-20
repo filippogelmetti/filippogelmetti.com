@@ -1,5 +1,5 @@
-import type { Tech } from "~~/layers/models/tech";
-import { TechId } from "~~/layers/models/tech-id";
+import type { Tech } from "@@/domain/models/tech";
+import { TechId } from "@@/domain/models/tech-id";
 
 type HashTableTechs<T> = {
   [key in TechId]: T;

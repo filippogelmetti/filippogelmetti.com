@@ -1,3 +1,27 @@
+<script lang="ts">
+import { defineComponent } from "vue";
+import { awards } from "@@/data/certificates-awards";
+import type { Award } from "@@/domain/models/award";
+
+export default defineComponent({
+  name: "CertificateAwards",
+  data() {
+    return {
+      awardsList: Object.values(awards) as Award[],
+    };
+  },
+  methods: {
+    formatDate(date: Date): string {
+      return date.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+    },
+  },
+});
+</script>
+
 <template>
   <div>
     <h1>Certificate Awards</h1>
@@ -32,30 +56,6 @@
     </ul>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import { awards } from "~~/layers/data/certificates-awards";
-import type { Award } from "~~/layers/models/award";
-
-export default defineComponent({
-  name: "CertificateAwards",
-  data() {
-    return {
-      awardsList: Object.values(awards) as Award[],
-    };
-  },
-  methods: {
-    formatDate(date: Date): string {
-      return date.toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    },
-  },
-});
-</script>
 
 <style scoped>
 h1 {

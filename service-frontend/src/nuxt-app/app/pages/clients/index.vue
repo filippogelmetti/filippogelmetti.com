@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import { clients } from "~~/layers/data/clients";
+import { clients } from "@@/data/clients";
 
-// Prepare the client list for use
 const clientList = Object.values(clients);
-
-// Set up intersection observer for animations
 const clientTiles = ref([]);
 
 onMounted(() => {

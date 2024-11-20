@@ -1,3 +1,17 @@
+<script lang="ts">
+import { defineComponent } from "vue";
+import { academicCertificates } from "@@/data/certificates-academic";
+
+export default defineComponent({
+  name: "CertificatesAcademic",
+  data() {
+    return {
+      academicCertificates,
+    };
+  },
+});
+</script>
+
 <template>
   <div>
     <h1>Academic Certificates</h1>
@@ -23,20 +37,6 @@
     </ul>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import { academicCertificates } from "~~/layers/data/certificates-academic";
-
-export default defineComponent({
-  name: "CertificatesAcademic",
-  data() {
-    return {
-      academicCertificates,
-    };
-  },
-});
-</script>
 
 <style scoped>
 h1 {
