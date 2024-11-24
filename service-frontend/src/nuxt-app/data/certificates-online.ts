@@ -9,6 +9,12 @@ export interface CertificateOnline {
 // Initialize the dataset
 export const certificatesOnline: CertificateOnline[] = [
   {
+    name: "Complete Backend (API) Development with Python A-Z",
+    date: "Nov 2024",
+    url: "https://www.udemy.com/certificate/UC-b1bb3c3e-bddd-43e7-814b-a1418a4d9ee4/", 
+    image: "2024-11-25 backend-python.png"
+  },
+  {
     name: "ReactJS, Hooks, Recoil, TDD, Clean Architecture, SOLID",
     date: "Nov 2024",
     url: "https://www.udemy.com/certificate/UC-dfbb6bbc-36eb-4e5c-abd2-ef39f1618f49/",

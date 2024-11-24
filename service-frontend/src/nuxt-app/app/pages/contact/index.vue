@@ -1,21 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-// Define the type for the form fields
 interface ContactForm {
   name: string;
   email: string;
   message: string;
 }
 
-// Initialize form fields with TypeScript typing
 const form = ref<ContactForm>({
   name: "",
   email: "",
   message: "",
 });
 
-// Manage loading and feedback status
 const loading = ref<boolean>(false);
 const success = ref<boolean>(false);
 const error = ref<boolean>(false);
@@ -27,17 +24,29 @@ const submitForm = async (): Promise<void> => {
   error.value = false;
 
   try {
-    // Send email using nuxt-mail
     await mail.send({
       from: `"${form.value.name}" <webform@filippogelmetti.com>`, // From address with display name
       to: "filippo.gelmetti@gmail.com", // Your email address
       subject: `Contact Form Submission from ${form.value.name}`,
       text: `
-Name: ${form.value.name}
-Email: ${form.value.email}
-Message:
-${form.value.message}
+        Name: ${form.value.name}
+        Email: ${form.value.email}
+        Message:${form.value.message}
       `,
+    });
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.value.name,
+        email: form.value.email,
+        message: form.value.message,
+        status: "sent",
+        error_message: "",
+      }),
     });
 
     // Show success and hide the form
