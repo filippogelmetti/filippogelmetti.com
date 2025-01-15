@@ -8,6 +8,9 @@ services:
       - .:/mnt/repo:rw
       - .git:/app/.git:rw
       - ./service-frontend/src:/app:rw
+    environment:
+      - GIT_DIR=/app/.git
+      - GIT_WORK_TREE=/mnt/repo
     ports:
       - "3000:3000"
       - "4200:4200"
