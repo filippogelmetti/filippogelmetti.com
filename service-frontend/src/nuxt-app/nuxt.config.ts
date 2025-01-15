@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  srcDir: "presentation",
 
   css: ["@/assets/style/global.scss"],
   compatibilityDate: "2024-04-03",
