@@ -1,49 +1,7 @@
 <div class="portfolio-container">
   <div class="grid">
     @for (item of portfolio; track $index) {
-    <div
-      class="portfolio-card"
-      style="{ transitionDelay: `${0.2 + Math.random() * 0.8}s` }"
-    >
-      <a
-        href="/portfolio/{{ item.slug }}"
-        class="card-content"
-      >
-        @if(item.subDirPathName) {
-        <img
-          src="/portfolio-images/screenshots/{{
-            item.subDirPathName
-          }}/hero-ai.jpg"
-          alt="Project thumbnail"
-          class="thumbnail"
-        />
-        }
-        <h2>{{ item.name }}</h2>
-        <p class="category-tag-wrapper">
-          @for (category of item.categoriesProjectType; track $index) {
-          <span class="category-tag">
-            {{ category.name }}
-          </span>
-
-          }
-        </p>
-        <p class="description">
-          {{ item.shortDescription }}
-        </p>
-        <div class="tech-stack">
-          @for(tech of item.techs; track $index) {
-          <span class="tech-icon">
-            <img
-              src="/portfolio-images/tech-logos/{{ tech.icon }}"
-              [alt]="tech.name"
-            />
-          </span>
-
-          }
-        </div>
-        <button class="view-more">Read More</button>
-      </a>
-    </div>
+    <app-portfolio-card [portfolioItem]="item" />
     }
   </div>
 </div>

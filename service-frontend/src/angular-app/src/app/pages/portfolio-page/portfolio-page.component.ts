@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { portfolioData } from 'src/app/data/_portfolio-data';
 import { Portfolio } from 'src/app/domain/models/portfolio';
+import { PortfolioCardComponent } from '../../components/portfolio-card/portfolio-card.component';
 
 @Component({
   selector: 'app-portfolio-page',
-  imports: [],
+  imports: [PortfolioCardComponent],
   templateUrl: './portfolio-page.component.html',
   styleUrl: './portfolio-page.component.scss',
 })

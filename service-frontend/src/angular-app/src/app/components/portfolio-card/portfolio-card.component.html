@@ -1,0 +1,42 @@
+<div
+  class="portfolio-card"
+  [class.visible]="isVisible()"
+  [style]="{ transitionDelay: transitionDelay }"
+>
+  <a
+    href="/portfolio/{{ portfolioItem().slug }}"
+    class="card-content"
+  >
+    @if(portfolioItem().subDirPathName) {
+    <img
+      src="/portfolio-images/screenshots/{{
+        portfolioItem().subDirPathName
+      }}/hero-ai.jpg"
+      alt="Project thumbnail"
+      class="thumbnail"
+    />
+    }
+    <h2>{{ portfolioItem().name }}</h2>
+    <p class="category-tag-wrapper">
+      @for (category of portfolioItem().categoriesProjectType; track $index) {
+      <span class="category-tag">
+        {{ category.name }}
+      </span>
+      }
+    </p>
+    <p class="description">
+      {{ portfolioItem().shortDescription }}
+    </p>
+    <div class="tech-stack">
+      @for(tech of portfolioItem().techs; track $index) {
+      <span class="tech-icon">
+        <img
+          src="/portfolio-images/tech-logos/{{ tech.icon }}"
+          [alt]="tech.name"
+        />
+      </span>
+      }
+    </div>
+    <button class="view-more">Read More</button>
+  </a>
+</div>
