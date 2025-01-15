@@ -1,0 +1,20 @@
+.main-layout-wrapper {
+  nav.nav-wrapper {
+    margin-top: 20px;
+    ul {
+      font-size: 30px;
+      letter-spacing: 2px;
+      list-style-type: none;
+      display: flex;
+
+      li {
+        padding: 0 30px 30px 0;
+
+        a::after {
+          border-bottom: 2px solid black;
+          bottom: -10px;
+        }
+      }
+    }
+  }
+}

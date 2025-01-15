@@ -1,0 +1,18 @@
+@use "@styles/scss-shared-modules/breakpoints.scss" as *;
+
+.layout-left-65-right-35-container {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(bp-large) {
+    flex-direction: row;
+  }
+
+  .col-left {
+    flex: 1 0 65%;
+  }
+
+  .col-right {
+    flex: 1 0 35%;
+  }
+}

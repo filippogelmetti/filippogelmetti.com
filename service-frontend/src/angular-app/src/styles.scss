@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@styles/scss-shared-modules/breakpoints.scss" as *;
+@use "@styles/scss-shared-modules/mixins.scss" as *;
+@use "@styles/scss-shared-modules/colors.scss" as *;
+@use "@styles/scss-modules/fonts.scss" as *;
+@use "@styles/scss-modules/layouts.scss" as *;
+@use "@styles/scss-modules/layout-left-70-right-30.scss" as *;

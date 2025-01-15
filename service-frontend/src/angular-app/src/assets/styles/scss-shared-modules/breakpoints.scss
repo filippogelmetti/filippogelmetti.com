@@ -1,0 +1,49 @@
+// scss-shared-modules/breakpoints.scss
+
+@mixin breakpoint($point) {
+  @if $point==bp-over-large-desktop {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+
+  @if $point==bp-extra-large-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+
+  @if $point==bp-large-desktop-slider-arrow {
+    @media (min-width: 1580px) {
+      @content;
+    }
+  }
+
+  @if $point==bp-large-desktop-start-padding {
+    @media (min-width: 1495px) {
+      @content;
+    }
+  }
+
+  @if $point==bp-large-desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point==bp-over-tablet {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  } @else if $point==bp-large {
+    @media (min-width: 1001px) {
+      @content;
+    }
+  } @else if $point==bp-medium {
+    @media (min-width: 701px) {
+      @content;
+    }
+  } @else if $point==bp-medium-max {
+    @media (max-width: 701px) {
+      @content;
+    }
+  }
+}
