@@ -19,7 +19,9 @@
     "module": "ES2022",
     "baseUrl": "./",
     "paths": {
-      "@styles/*": ["src/assets/styles/*"]
+      "@styles/*": ["src/assets/styles/*"],
+      "@domain/*": ["src/domain/*"],
+      "@data/*": ["src/data/*"]
     }
   },
   "angularCompilerOptions": {

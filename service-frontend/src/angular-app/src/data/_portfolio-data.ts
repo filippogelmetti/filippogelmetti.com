@@ -1,4 +1,4 @@
-import type { Portfolio } from '../domain/models/portfolio';
+import type { Portfolio } from '@domain/models/portfolio';
 import { awards } from './certificates-awards';
 import { clients } from './clients';
 import { countries } from './countries';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { portfolioData } from 'src/app/data/_portfolio-data';
-import { Portfolio } from 'src/app/domain/models/portfolio';
+import { portfolioData } from 'src/data/_portfolio-data';
+import { Portfolio } from 'src/domain/models/portfolio';
 import { PortfolioCardComponent } from '../../components/portfolio-card/portfolio-card.component';
 
 @Component({
