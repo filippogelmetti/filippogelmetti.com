@@ -19,6 +19,9 @@
     "module": "ES2022",
     "baseUrl": "./",
     "paths": {
+      "@layouts/*": ["src/app/layouts/*"],
+      "@components/*": ["src/app/components/*"],
+      "@pages/*": ["src/app/pages/*"],
       "@styles/*": ["src/assets/styles/*"],
       "@domain/*": ["src/domain/*"],
       "@data/*": ["src/data/*"]

@@ -1,7 +1,7 @@
 import { Component, ElementRef, input, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio-card',
+  selector: 'portfolio-card',
   templateUrl: './portfolio-card.component.html',
   styleUrls: ['./portfolio-card.component.scss'],
 })

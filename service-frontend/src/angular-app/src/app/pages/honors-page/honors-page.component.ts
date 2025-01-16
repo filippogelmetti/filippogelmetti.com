@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-honors-page',
+  selector: 'honors-page',
   imports: [],
   templateUrl: './honors-page.component.html',
-  styleUrl: './honors-page.component.scss'
+  styleUrl: './honors-page.component.scss',
 })
-export class HonorsPageComponent {
-
-}
+export class HonorsPageComponent {}

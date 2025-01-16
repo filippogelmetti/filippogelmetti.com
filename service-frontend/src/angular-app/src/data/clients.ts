@@ -1,5 +1,5 @@
-import type { Client } from '../domain/models/client';
-import { ClientId } from '../domain/models/client-id';
+import type { Client } from '@domain/models/client';
+import { ClientId } from '@domain/models/client-id';
 
 type HashTableClients<T> = {
   [key in ClientId]: T;

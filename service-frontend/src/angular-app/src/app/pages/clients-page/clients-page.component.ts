@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-clients-page',
+  selector: 'clients-page',
   imports: [],
   templateUrl: './clients-page.component.html',
-  styleUrl: './clients-page.component.scss'
+  styleUrl: './clients-page.component.scss',
 })
-export class ClientsPageComponent {
-
-}
+export class ClientsPageComponent {}
