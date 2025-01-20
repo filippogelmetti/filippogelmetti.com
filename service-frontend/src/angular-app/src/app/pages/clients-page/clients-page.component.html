@@ -1,1 +1,26 @@
-<p>clients-page works!</p>
+<section class="clients-wrapper">
+  <div class="container">
+    <h1 class="title">Clients I've Delivered Work For</h1>
+    <div class="clients-grid">
+      @for(client of clientList; track client.id; let clientIndex = $index) {
+      <div
+        class="client-tile"
+        :style="{ '--delay': `${(index % 5) * 0.2}s` }"
+      >
+        <a
+          :href="client.websiteUrl || '#'"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            :src="`/portfolio-images/clients-logos/${client.logo}`"
+            :alt="client.name"
+            class="client-logo"
+          />
+          <p class="client-name">{{ client.name }}</p>
+        </a>
+      </div>
+      }
+    </div>
+  </div>
+</section>

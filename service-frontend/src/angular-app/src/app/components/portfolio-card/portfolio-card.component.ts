@@ -1,4 +1,5 @@
 import { Component, ElementRef, input, signal } from '@angular/core';
+import { PlatformService } from 'src/app/services/platform.service';
 
 @Component({
   selector: 'portfolio-card',
@@ -9,29 +10,33 @@ export class PortfolioCardComponent {
   portfolioItem: any = input();
   isVisible = signal<boolean>(false);
   transitionDelay: string;
-  private observer: IntersectionObserver = new IntersectionObserver(() => {});
+  private observer: IntersectionObserver | undefined;
 
-  constructor(private elementRef: ElementRef) {
+  constructor(
+    private elementRef: ElementRef,
+    private platform: PlatformService
+  ) {
     // Generate a random transition delay value between 0.2s and 1s
     this.transitionDelay = `${0.2 + Math.random() * 0.8}s`;
   }
 
   ngAfterViewInit(): void {
-    this.observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          console.log('Element is intersecting');
-          this.isVisible.set(true);
-          this.observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 } // Trigger when 10% of the element is visible
-    );
-    // Start observing the portfolio card element
-    this.observer.observe(this.elementRef.nativeElement);
+    if (this.platform.isBrowser()) {
+      this.observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            console.log('Element is intersecting');
+            this.isVisible.set(true);
+            this.observer?.unobserve(entry.target);
+          }
+        },
+        { threshold: 0.1 } // Trigger when 10% of the element is visible
+      );
+      this.observer.observe(this.elementRef.nativeElement);
+    }
   }
 
   ngOnDestroy(): void {
-    this.observer.disconnect();
+    this.observer?.disconnect();
   }
 }
