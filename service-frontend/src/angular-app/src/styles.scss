@@ -1,4 +1,5 @@
-@use "@styles/scss-shared-modules/breakpoints.scss" as *;
+// /app/angular-app/src/styles.scss
+@use "@styles/scss-shared-modules/breakpoints.scss" as breakpoints;
 @use "@styles/scss-shared-modules/colors.scss" as *;
 @use "@styles/scss-modules/fonts.scss" as *;
 @use "@styles/scss-modules/layouts.scss" as *;

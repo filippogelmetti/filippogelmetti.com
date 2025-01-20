@@ -1,4 +1,4 @@
-<!-- <div
+<div
   v-if="portfolioItem"
   class="portfolio-item"
 >
@@ -14,34 +14,31 @@
           ></div>
           <div class="to-bottom-container padded-default-left">
             <div class="label">Project</div>
-            <h1>{{ portfolioItem.name }}</h1>
+            <h1>{{ portfolioItem?.name }}</h1>
           </div>
           <div class="tech-icons-container padded-default-left">
             <div class="label-stack">PROJECT STACK</div>
             <div class="container-stack">
+              @for (tech of portfolioItem?.techs; track $index) {
               <div
-                v-for="tech in portfolioItem.techs"
-                :title="tech.name"
                 class="tech-icon-wrapper"
+                [title]="tech.name"
               >
-                <img
-                  :src="`/portfolio-images/tech-logos/${tech.icon}`"
-                  :alt="tech.name"
-                  width="50"
-                />
+                <!-- <img [src]="`/portfolio-images/tech-logos/${tech?.icon}`" [alt]="tech?.name" width="50" /> -->
               </div>
+              }
             </div>
           </div>
         </div>
       </div>
       <div class="col-right">
         <div class="trans-overlay">
-          <div
+          <!-- <div
             class="hero-image"
             :style="{
                     backgroundImage: `url('/portfolio-images/screenshots/${portfolioItem.subDirPathName}/hero-ai.jpg')`,
                   }"
-          ></div>
+          ></div> -->
         </div>
       </div>
     </div>
@@ -50,9 +47,9 @@
       <div class="col-left">
         <div class="body-content-wrapper">
           <div class="description">
-            <p v-for="desc in portfolioItem.description">
+            <!-- <p v-for="desc in portfolioItem.description">
               {{ desc }}
-            </p>
+            </p> -->
           </div>
           <div class="skills-learned"></div>
         </div>
@@ -62,7 +59,7 @@
             class="screenshot-wrapper"
             v-for="(screenshotNr, j) in Array(portfolioItem.nrOfScreenshots)"
           >
-            <img
+            <!-- <img
               :src="
                       '/portfolio-images/screenshots/' +
                       portfolioItem.subDirPathName +
@@ -71,7 +68,7 @@
                       '.jpg'
                     "
               alt=""
-            />
+            /> -->
           </div>
         </div>
       </div>
@@ -81,10 +78,10 @@
           v-if="portfolioItem?.client?.logo"
         >
           <div class="value-highlight client-logo-container">
-            <img
+            <!-- <img
               :src="`/portfolio-images/clients-logos/${portfolioItem?.client?.logo}`"
               alt=""
-            />
+            /> -->
           </div>
         </div>
 
@@ -94,12 +91,12 @@
         >
           <div class="label">Live Url</div>
           <div class="value-highlight">
-            <a
+            <!-- <a
               :href="`${portfolioItem.url}`"
               target="_blank"
             >
-              {{ portfolioItem.url }}
-            </a>
+              {{ portfolioItem?.url }}
+            </a> -->
           </div>
         </div>
 
@@ -133,7 +130,7 @@
           v-if="portfolioItem.date"
         >
           <div class="label">Launch Date</div>
-          <div class="value-highlight">
+          <!-- <div class="value-highlight">
             {{
                     portfolioItem.date
                       ? new Date(portfolioItem.date).toLocaleDateString("en-US", {
@@ -142,7 +139,7 @@
                         })
                       : "No Date Available"
             }}
-          </div>
+          </div> -->
         </div>
 
         <div
@@ -150,16 +147,16 @@
           v-if="portfolioItem?.country?.name"
         >
           <div class="label">Country</div>
-          <div class="value-highlight">{{ portfolioItem.country?.name }}</div>
+          <div class="value-highlight">{{ portfolioItem?.country?.name }}</div>
         </div>
 
         <div class="slot">
           <div class="label">Stack</div>
           <div class="value-highlight">
             <ul>
-              <li v-for="tech in portfolioItem.techs">
+              <!-- <li v-for="tech in portfolioItem.techs">
                 {{ tech.name }}
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -168,9 +165,9 @@
           <div class="label">Key features</div>
           <div class="value-highlight">
             <ul>
-              <li v-for="feature of portfolioItem.keyFeatures">
+              <!-- <li v-for="feature of portfolioItem.keyFeatures">
                 {{ feature }}
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -179,9 +176,9 @@
           <div class="label">Key learnings</div>
           <div class="value-highlight">
             <ul>
-              <li v-for="skill of portfolioItem.skillsLearned">
+              <!-- <li v-for="skill of portfolioItem.skillsLearned">
                 {{ skill }}
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -207,4 +204,4 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
