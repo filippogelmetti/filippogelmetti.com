@@ -39,12 +39,14 @@
       </div>
       <div class="col-right">
         <div class="trans-overlay">
-          <!-- <div
+          <div
             class="hero-image"
-            :style="{
-                    backgroundImage: `url('/portfolio-images/screenshots/${portfolioItem.subDirPathName}/hero-ai.jpg')`,
-                  }"
-          ></div> -->
+            [style.backgroundImage]="
+              'url(/portfolio-images/screenshots/' +
+              portfolioItem?.subDirPathName +
+              '/hero-ai.jpg)'
+            "
+          ></div>
         </div>
       </div>
     </div>
@@ -53,29 +55,28 @@
       <div class="col-left">
         <div class="body-content-wrapper">
           <div class="description">
-            <!-- <p v-for="desc in portfolioItem.description">
-              {{ desc }}
-            </p> -->
+            @for (desc of portfolioItem?.description; track $index) {
+            {{ desc }}
+            }
           </div>
           <div class="skills-learned"></div>
         </div>
 
         <div class="screenshots-wrapper">
-          <div
-            class="screenshot-wrapper"
-            v-for="(screenshotNr, j) in Array(portfolioItem.nrOfScreenshots)"
-          >
-            <!-- <img
-              :src="
-                      '/portfolio-images/screenshots/' +
-                      portfolioItem.subDirPathName +
-                      '/' +
-                      (j + 1) +
-                      '.jpg'
-                    "
-              alt=""
-            /> -->
+          @for (i of getScreenshotNumbers(); track i) {
+          <div class="screenshot-wrapper">
+            <img
+              [src]="
+                '/portfolio-images/screenshots/' +
+                portfolioItem?.subDirPathName +
+                '/' +
+                (i + 1) +
+                '.jpg'
+              "
+              alt="Screenshot {{ i + 1 }}"
+            />
           </div>
+          }
         </div>
       </div>
       <div class="col-right">

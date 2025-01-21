@@ -14,6 +14,11 @@ export class PortfolioItemComponent {
 
   constructor(private route: ActivatedRoute) {}
 
+  getScreenshotNumbers(): number[] {
+    const numScreenshots = this.portfolioItem?.nrOfScreenshots || 0;
+    return Array.from({ length: numScreenshots }, (_, i) => i);
+  }
+
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const slug = params['slug'];
