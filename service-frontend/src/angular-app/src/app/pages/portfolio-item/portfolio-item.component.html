@@ -1,7 +1,4 @@
-<div
-  v-if="portfolioItem"
-  class="portfolio-item"
->
+<div class="portfolio-item">
   <div class="project-wrapper">
     <div class="layout-left-65-right-35-container layer-top">
       <div class="col-left">
@@ -56,7 +53,9 @@
         <div class="body-content-wrapper">
           <div class="description">
             @for (desc of portfolioItem?.description; track $index) {
-            {{ desc }}
+            <p>
+              {{ desc }}
+            </p>
             }
           </div>
           <div class="skills-learned"></div>
@@ -80,134 +79,113 @@
         </div>
       </div>
       <div class="col-right">
-        <div
-          class="slot"
-          v-if="portfolioItem?.client?.logo"
-        >
+        @if (portfolioItem?.client?.logo) {
+        <div class="slot">
           <div class="value-highlight client-logo-container">
-            <!-- <img
-              :src="`/portfolio-images/clients-logos/${portfolioItem?.client?.logo}`"
+            <img
+              [src]="
+                '/portfolio-images/clients-logos/' + portfolioItem?.client?.logo
+              "
               alt=""
-            /> -->
+            />
           </div>
         </div>
-
-        <div
-          class="slot"
-          v-if="portfolioItem.url"
-        >
+        } @if (portfolioItem?.url) {
+        <div class="slot">
           <div class="label">Live Url</div>
           <div class="value-highlight">
-            <!-- <a
-              :href="`${portfolioItem.url}`"
+            <a
+              [href]="portfolioItem?.url"
               target="_blank"
             >
               {{ portfolioItem?.url }}
-            </a> -->
+            </a>
           </div>
         </div>
-
-        <div
-          class="slot"
-          v-if="portfolioItem.urlWebArchive"
-        >
+        } @if (portfolioItem?.urlWebArchive) {
+        <div class="slot">
           <div class="label">Web Archive Url</div>
           <div class="value-highlight">
             <a
-              :href="portfolioItem.urlWebArchive"
+              [href]="portfolioItem?.urlWebArchive"
               target="_blank"
             >
               Open old offline url
             </a>
           </div>
         </div>
-
-        <div
-          class="slot"
-          v-if="portfolioItem.client"
-        >
+        } @if (portfolioItem?.client) {
+        <div class="slot">
           <div class="label">Client</div>
           <div class="value-highlight">
             {{ portfolioItem?.client?.name }}
           </div>
         </div>
-
-        <div
-          class="slot"
-          v-if="portfolioItem.date"
-        >
+        } @if (portfolioItem?.date) {
+        <div class="slot">
           <div class="label">Launch Date</div>
-          <!-- <div class="value-highlight">
-            {{
-                    portfolioItem.date
-                      ? new Date(portfolioItem.date).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                        })
-                      : "No Date Available"
-            }}
-          </div> -->
+          <div class="value-highlight">
+            {{ formattedDate }}
+          </div>
         </div>
-
-        <div
-          class="slot"
-          v-if="portfolioItem?.country?.name"
-        >
+        } @if (portfolioItem?.country?.name) {
+        <div class="slot">
           <div class="label">Country</div>
           <div class="value-highlight">{{ portfolioItem?.country?.name }}</div>
         </div>
-
+        }
         <div class="slot">
           <div class="label">Stack</div>
           <div class="value-highlight">
             <ul>
-              <!-- <li v-for="tech in portfolioItem.techs">
+              @for(tech of portfolioItem?.techs; track $index) {
+              <li>
                 {{ tech.name }}
-              </li> -->
+              </li>
+              }
             </ul>
           </div>
         </div>
-
         <div class="slot">
           <div class="label">Key features</div>
           <div class="value-highlight">
             <ul>
-              <!-- <li v-for="feature of portfolioItem.keyFeatures">
+              @for(feature of portfolioItem?.keyFeatures; track $index) {
+              <li>
                 {{ feature }}
-              </li> -->
+              </li>
+              }
             </ul>
           </div>
         </div>
-
         <div class="slot">
           <div class="label">Key learnings</div>
           <div class="value-highlight">
             <ul>
-              <!-- <li v-for="skill of portfolioItem.skillsLearned">
+              @for(skill of portfolioItem?.skillsLearned; track $index) {
+              <li>
                 {{ skill }}
-              </li> -->
+              </li>
+              }
             </ul>
           </div>
         </div>
-
-        <div
-          class="slot"
-          v-if="portfolioItem?.award"
-        >
+        @if (portfolioItem?.award) {
+        <div class="slot">
           <div class="label">Award</div>
-
           <div class="award-wrapper">
             <a
-              :href="portfolioItem.award.websiteUrl"
+              [href]="portfolioItem?.award?.websiteUrl"
               target="_blank"
             >
               <img
-                :src="`/portfolio-images/awards/${portfolioItem.award.screenshot}`"
+                [src]="'/certificates/awards/' + portfolioItem?.award?.image"
                 alt=""
               />
             </a>
           </div>
         </div>
+        }
       </div>
     </div>
   </div>
