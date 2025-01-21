@@ -1,5 +1,4 @@
-// /app/angular-app/src/app/pages/portfolio-item/portfolio-item.component.scss
-@use "@styles/scss-shared-modules/breakpoints.scss" as breakpoints;
+@use "@styles/shared-global.scss" as *;
 
 .portfolio-item {
   .project-wrapper {
@@ -8,7 +7,7 @@
 
     .layer-top {
       .col-left {
-        @include breakpoints.breakpoint(bp-large) {
+        @include breakpoint(bp-large) {
           min-height: 25vw;
         }
         .title-bar-container {
@@ -147,7 +146,7 @@
 
       .col-right {
         padding: 20px;
-        @include breakpoints.breakpoint(bp-large) {
+        @include breakpoint(bp-large) {
           padding: 80px;
         }
         a:visited {

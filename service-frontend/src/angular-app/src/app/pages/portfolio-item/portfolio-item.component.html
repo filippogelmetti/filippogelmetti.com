@@ -8,9 +8,11 @@
         <div class="title-bar-container">
           <div
             class="title-area-container padded-default-left"
-            :style="{
-                    backgroundImage: `url('/portfolio-images/screenshots/${portfolioItem.subDirPathName}/hero-ai.jpg')`,
-                  }"
+            [style.backgroundImage]="
+              'url(/portfolio-images/screenshots/' +
+              portfolioItem?.subDirPathName +
+              '/hero-ai.jpg)'
+            "
           ></div>
           <div class="to-bottom-container padded-default-left">
             <div class="label">Project</div>
@@ -24,7 +26,11 @@
                 class="tech-icon-wrapper"
                 [title]="tech.name"
               >
-                <!-- <img [src]="`/portfolio-images/tech-logos/${tech?.icon}`" [alt]="tech?.name" width="50" /> -->
+                <img
+                  [src]="'/portfolio-images/tech-logos/' + tech?.icon"
+                  [alt]="tech?.name"
+                  width="50"
+                />
               </div>
               }
             </div>
