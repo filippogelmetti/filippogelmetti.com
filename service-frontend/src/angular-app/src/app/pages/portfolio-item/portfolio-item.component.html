@@ -18,7 +18,7 @@
           <div class="tech-icons-container padded-default-left">
             <div class="label-stack">PROJECT STACK</div>
             <div class="container-stack">
-              @for (tech of portfolioItem?.techs; track $index) {
+              @for (tech of portfolioItem?.techs; track null) {
               <div
                 class="tech-icon-wrapper"
                 [title]="tech.name"
@@ -52,7 +52,7 @@
       <div class="col-left">
         <div class="body-content-wrapper">
           <div class="description">
-            @for (desc of portfolioItem?.description; track $index) {
+            @for (desc of portfolioItem?.description; track null) {
             <p>
               {{ desc }}
             </p>
@@ -138,7 +138,7 @@
           <div class="label">Stack</div>
           <div class="value-highlight">
             <ul>
-              @for(tech of portfolioItem?.techs; track $index) {
+              @for(tech of portfolioItem?.techs; track null) {
               <li>
                 {{ tech.name }}
               </li>
@@ -150,7 +150,7 @@
           <div class="label">Key features</div>
           <div class="value-highlight">
             <ul>
-              @for(feature of portfolioItem?.keyFeatures; track $index) {
+              @for(feature of portfolioItem?.keyFeatures; track null) {
               <li>
                 {{ feature }}
               </li>
@@ -162,7 +162,7 @@
           <div class="label">Key learnings</div>
           <div class="value-highlight">
             <ul>
-              @for(skill of portfolioItem?.skillsLearned; track $index) {
+              @for(skill of portfolioItem?.skillsLearned; track null) {
               <li>
                 {{ skill }}
               </li>
