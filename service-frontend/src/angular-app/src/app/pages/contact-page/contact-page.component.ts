@@ -12,7 +12,7 @@ import {
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.css'],
+  styleUrls: ['./contact-page.component.scss'],
 })
 export class ContactPageComponent {
   // Signals for state

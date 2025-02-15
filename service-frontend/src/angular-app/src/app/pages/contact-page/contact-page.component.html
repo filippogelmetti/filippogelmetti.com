@@ -1,60 +1,75 @@
-<form
-  (submit)="sendEmail()"
-  [formGroup]="contactForm"
-  class="contact-form"
->
-  <label>
-    Name:
-    <input
-      type="text"
-      formControlName="name"
-    />
-    @if (contactForm.controls.name.invalid && contactForm.controls.name.touched)
-    {
-    <span class="error">Name is required</span>
-    }
-  </label>
+<div class="contact-container">
+  <h2>Contact Me</h2>
 
-  <label>
-    Email:
-    <input
-      type="email"
-      formControlName="email"
-    />
-    @if (contactForm.controls.email.invalid &&
-    contactForm.controls.email.touched) {
-    <span class="error">Valid email required</span>
-    }
-  </label>
-
-  <label>
-    Message:
-    <textarea formControlName="message"></textarea>
-    @if (contactForm.controls.message.invalid &&
-    contactForm.controls.message.touched) {
-    <span class="error">Message is required</span>
-    }
-  </label>
-
-  <button
-    type="submit"
-    [disabled]="sending() || contactForm.invalid"
+  <form
+    [formGroup]="contactForm"
+    (ngSubmit)="sendEmail()"
+    class="contact-form"
   >
-    @if (sending()) { Sending... } @else { Send }
-  </button>
+    <label>
+      Name
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Your Name"
+      />
+      @if (contactForm.controls.name.invalid &&
+      contactForm.controls.name.touched) {
+      <span class="error">Name is required (min. 3 characters)</span>
+      }
+    </label>
 
-  @if (success() !== null) { @if (success()) {
-  <p class="success">Message sent successfully!</p>
-  } @else {
-  <p class="error">Failed to send message. Try again.</p>
-  } }
-</form>
+    <label>
+      Email
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Your Email"
+      />
+      @if (contactForm.controls.email.invalid &&
+      contactForm.controls.email.touched) {
+      <span class="error">Enter a valid email</span>
+      }
+    </label>
 
-<p>Please contact me via LinkedIn</p>
-<a href="https://www.linkedin.com/in/filippo-gelmetti-80b9533/">
-  <img
-    src="/icons/linkedin_icon.svg"
-    alt="LinkedIn"
-  />
-  Filippo Gelmetti LinkedIn
-</a>
+    <label>
+      Message
+      <textarea
+        formControlName="message"
+        rows="4"
+        placeholder="Your Message"
+      ></textarea>
+      @if (contactForm.controls.message.invalid &&
+      contactForm.controls.message.touched) {
+      <span class="error">Message must be at least 10 characters long</span>
+      }
+    </label>
+
+    <button
+      type="submit"
+      [disabled]="contactForm.invalid || sending()"
+    >
+      @if (sending()) { Sending... } @else { Send Message }
+    </button>
+
+    @if (success() === true) {
+    <p class="success">Message sent successfully!</p>
+    } @else if (success() === false) {
+    <p class="error">Something went wrong. Try again.</p>
+    }
+  </form>
+
+  <div class="linkedin">
+    <p>Or contact me via LinkedIn</p>
+    <a
+      href="https://www.linkedin.com/in/filippo-gelmetti-80b9533/"
+      target="_blank"
+    >
+      <img
+        src="/icons/linkedin_icon.svg"
+        alt="LinkedIn Icon"
+      />
+      Filippo Gelmetti on LinkedIn
+    </a>
+  </div>
+</div>

@@ -1,35 +1,86 @@
+.contact-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
+  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 button {
-  padding: 10px;
+  padding: 12px;
   background-color: #0077b5;
   color: white;
+  font-size: 1rem;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:disabled {
   background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #005a8e;
 }
 
 .success {
   color: green;
+  font-weight: bold;
 }
 
 .error {
   color: red;
+  font-size: 0.85rem;
+}
+
+.linkedin {
+  margin-top: 20px;
+}
+
+.linkedin a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: bold;
+  gap: 8px;
+}
+
+.linkedin img {
+  width: 20px;
+  height: 20px;
 }
