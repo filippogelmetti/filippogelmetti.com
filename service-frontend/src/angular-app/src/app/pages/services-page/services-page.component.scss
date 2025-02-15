@@ -59,3 +59,30 @@
   color: #555;
   margin-bottom: 8px;
 }
+
+/* Colorful lines under each service */
+.service-divider {
+  height: 2px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #ddd;
+}
+
+.service-divider.type {
+  background-color: #ff6347;
+} /* Tomato */
+.service-divider.frontend {
+  background-color: #ff9800;
+} /* Orange */
+.service-divider.backend {
+  background-color: #4caf50;
+} /* Green */
+.service-divider.process {
+  background-color: #2196f3;
+} /* Blue */
+.service-divider.engineering {
+  background-color: #9c27b0;
+} /* Purple */
+.service-divider.ai {
+  background-color: #3f51b5;
+} /* Indigo */

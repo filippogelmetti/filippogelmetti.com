@@ -1,3 +1,36 @@
 .homepage-wrapper {
   padding-top: 40px;
 }
+
+button {
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.explore-button {
+  background-color: #5a9bf4; /* Light Blue */
+  color: white;
+  margin-right: 10px; /* Add spacing between buttons */
+}
+
+.explore-button:hover {
+  background-color: #3a7db3;
+}
+
+.connect-button {
+  background-color: #4caf50; /* Light Green */
+  color: white;
+}
+
+.connect-button:hover {
+  background-color: #388e3c;
+}
+
+button:focus {
+  outline: none;
+}

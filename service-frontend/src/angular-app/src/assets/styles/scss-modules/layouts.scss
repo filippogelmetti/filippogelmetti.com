@@ -46,7 +46,7 @@ body {
   padding: $padding-default-mobile;
 
   @include breakpoint(bp-large) {
-    padding: $padding-default-big;
+    padding: 40px $padding-default-big;
   }
 }
 
