@@ -1,1 +1,60 @@
-<p>contact-page works!</p>
+<form
+  (submit)="sendEmail()"
+  [formGroup]="contactForm"
+  class="contact-form"
+>
+  <label>
+    Name:
+    <input
+      type="text"
+      formControlName="name"
+    />
+    @if (contactForm.controls.name.invalid && contactForm.controls.name.touched)
+    {
+    <span class="error">Name is required</span>
+    }
+  </label>
+
+  <label>
+    Email:
+    <input
+      type="email"
+      formControlName="email"
+    />
+    @if (contactForm.controls.email.invalid &&
+    contactForm.controls.email.touched) {
+    <span class="error">Valid email required</span>
+    }
+  </label>
+
+  <label>
+    Message:
+    <textarea formControlName="message"></textarea>
+    @if (contactForm.controls.message.invalid &&
+    contactForm.controls.message.touched) {
+    <span class="error">Message is required</span>
+    }
+  </label>
+
+  <button
+    type="submit"
+    [disabled]="sending() || contactForm.invalid"
+  >
+    @if (sending()) { Sending... } @else { Send }
+  </button>
+
+  @if (success() !== null) { @if (success()) {
+  <p class="success">Message sent successfully!</p>
+  } @else {
+  <p class="error">Failed to send message. Try again.</p>
+  } }
+</form>
+
+<p>Please contact me via LinkedIn</p>
+<a href="https://www.linkedin.com/in/filippo-gelmetti-80b9533/">
+  <img
+    src="/icons/linkedin_icon.svg"
+    alt="LinkedIn"
+  />
+  Filippo Gelmetti LinkedIn
+</a>

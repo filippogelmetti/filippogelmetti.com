@@ -3,10 +3,14 @@
     <h1 class="title">Clients I've Delivered Work For</h1>
     <div class="clients-grid">
       @for(client of clientList; track client.id; let clientIndex = $index) {
+      <div>
+        {{ client.name }}
+      </div>
       <div
         class="client-tile"
         :style="{ '--delay': `${(index % 5) * 0.2}s` }"
       >
+        {{ client.name }}
         <a
           :href="client.websiteUrl || '#'"
           target="_blank"
