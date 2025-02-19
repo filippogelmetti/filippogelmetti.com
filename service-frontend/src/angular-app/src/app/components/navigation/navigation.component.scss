@@ -1,8 +1,7 @@
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; // Change to space-between
   align-items: center;
-  gap: 20px; /* Optional, adds space between items */
   top: 0;
   width: 100%;
   font-size: 20px;
@@ -10,13 +9,62 @@
   z-index: 10;
   background-color: white;
   border-bottom: 1px solid gray;
-  .nav-tab {
-    padding: 20px;
-    a {
-      color: black;
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    .nav-tab {
+      padding: 20px;
+      a {
+        color: black;
+      }
+      .active-nav-tab {
+        font-weight: bold;
+      }
     }
-    .active-nav-tab {
-      font-weight: bold;
+  }
+
+  .hamburger {
+    padding: 10px;
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      .hamburger-icon {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .slide-menu {
+    position: fixed;
+    top: 61px; // Adjust to match header height
+    left: 0;
+    width: 250px; // Adjust width as needed
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .nav-tab {
+      padding: 10px;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    // Adjust breakpoint if needed
+    .nav-links {
+      display: none; // Hide desktop nav on mobile
     }
   }
 }

@@ -25,7 +25,6 @@ export class PortfolioCardComponent {
       this.observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            console.log('Element is intersecting');
             this.isVisible.set(true);
             this.observer?.unobserve(entry.target);
           }

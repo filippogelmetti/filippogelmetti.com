@@ -1,58 +1,74 @@
 <header class="navigation">
-  <div class="nav-tab">
-    <a
-      href="/"
-      exact-active-class="active-nav-tab"
+  @if (isMobile()) {
+  <div class="hamburger">
+    <button
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation menu"
     >
-      HOME
-    </a>
+      <span class="hamburger-icon">&#9776;</span>
+    </button>
   </div>
-  <div class="nav-tab">
-    <a
-      href="/portfolio"
-      active-class="active-nav-tab"
-    >
-      PORTFOLIO
-    </a>
+  } @if (!isMobile() || (isMobile() && !isMenuOpen())) {
+  <div class="nav-links">
+    <div class="nav-tab">
+      <a
+        href="/"
+        exact-active-class="active-nav-tab"
+        >HOME</a
+      >
+    </div>
+    <div class="nav-tab">
+      <a
+        href="/portfolio"
+        active-class="active-nav-tab"
+        >PORTFOLIO</a
+      >
+    </div>
+    <div class="nav-tab">
+      <a
+        href="/services"
+        active-class="active-nav-tab"
+        >SERVICES</a
+      >
+    </div>
+    <div class="nav-tab">
+      <a
+        href="/contact"
+        active-class="active-nav-tab"
+        >CONTACT</a
+      >
+    </div>
   </div>
-  <div class="nav-tab">
-    <a
-      href="/services"
-      active-class="active-nav-tab"
-    >
-      SERVICES
-    </a>
+  } @else {
+  <div class="slide-menu">
+    <div class="nav-tab">
+      <a
+        href="/"
+        (click)="toggleMenu()"
+        >HOME</a
+      >
+    </div>
+    <div class="nav-tab">
+      <a
+        href="/portfolio"
+        (click)="toggleMenu()"
+        >PORTFOLIO</a
+      >
+    </div>
+    <div class="nav-tab">
+      <a
+        href="/services"
+        (click)="toggleMenu()"
+        >SERVICES</a
+      >
+    </div>
+    <div class="nav-tab">
+      <a
+        href="/contact"
+        (click)="toggleMenu()"
+        >CONTACT</a
+      >
+    </div>
   </div>
-  <!-- <div class="nav-tab">
-    <a
-      href="/clients"
-      active-class="active-nav-tab"
-    >
-      CLIENTS
-    </a>
-  </div> -->
-  <!-- <div class="nav-tab">
-    <a
-      href="/honors"
-      active-class="active-nav-tab"
-    >
-      HONORS
-    </a>
-  </div> -->
-  <!-- <div class="nav-tab">
-    <a
-      href="/blog"
-      active-class="active-nav-tab"
-    >
-      BLOG
-    </a>
-  </div> -->
-  <div class="nav-tab">
-    <a
-      href="/contact"
-      active-class="active-nav-tab"
-    >
-      CONTACT
-    </a>
-  </div>
+  }
 </header>
