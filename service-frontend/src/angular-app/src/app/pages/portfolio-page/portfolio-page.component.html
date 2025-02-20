@@ -14,7 +14,7 @@
 
 <div class="portfolio-container">
   <div class="grid">
-    @for (item of portfolio; track $index) {
+    @for (item of portfolio; track null) {
     <portfolio-card [portfolioItem]="item" />
     }
   </div>

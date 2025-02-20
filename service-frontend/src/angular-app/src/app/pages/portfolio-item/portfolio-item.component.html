@@ -18,7 +18,7 @@
           <div class="tech-icons-container padded-default-left">
             <div class="label-stack">PROJECT STACK</div>
             <div class="container-stack">
-              @for (tech of portfolioItem?.techs; track null) {
+              @for (tech of portfolioItem?.techs; track tech?.name) {
               <div
                 class="tech-icon-wrapper"
                 [title]="tech.name"
@@ -52,7 +52,7 @@
       <div class="col-left">
         <div class="body-content-wrapper">
           <div class="description">
-            @for (desc of portfolioItem?.description; track null) {
+            @for (desc of portfolioItem?.description; track $index) {
             <p>
               {{ desc }}
             </p>
@@ -63,7 +63,18 @@
 
         <div class="screenshots-wrapper">
           @for (i of getScreenshotNumbers(); track i) {
-          <div class="screenshot-wrapper">
+          <div
+            class="screenshot-wrapper"
+            (click)="
+              openGallery(
+                '/portfolio-images/screenshots/' +
+                  portfolioItem?.subDirPathName +
+                  '/' +
+                  (i + 1) +
+                  '.jpg'
+              )
+            "
+          >
             <img
               [src]="
                 '/portfolio-images/screenshots/' +
@@ -73,6 +84,20 @@
                 '.jpg'
               "
               alt="Screenshot {{ i + 1 }}"
+            />
+          </div>
+          }
+
+          <!-- Gallery Overlay -->
+          @if (isGalleryOpen()) {
+          <div
+            class="gallery-overlay"
+            (click)="closeGallery()"
+          >
+            <img
+              [src]="galleryImage()"
+              class="gallery-image"
+              (click)="$event.stopPropagation()"
             />
           </div>
           }
@@ -138,7 +163,7 @@
           <div class="label">Stack</div>
           <div class="value-highlight">
             <ul>
-              @for(tech of portfolioItem?.techs; track null) {
+              @for(tech of portfolioItem?.techs; track $index) {
               <li>
                 {{ tech.name }}
               </li>
@@ -150,7 +175,7 @@
           <div class="label">Key features</div>
           <div class="value-highlight">
             <ul>
-              @for(feature of portfolioItem?.keyFeatures; track null) {
+              @for(feature of portfolioItem?.keyFeatures; track $index) {
               <li>
                 {{ feature }}
               </li>
@@ -162,7 +187,7 @@
           <div class="label">Key learnings</div>
           <div class="value-highlight">
             <ul>
-              @for(skill of portfolioItem?.skillsLearned; track null) {
+              @for(skill of portfolioItem?.skillsLearned; track $index) {
               <li>
                 {{ skill }}
               </li>
