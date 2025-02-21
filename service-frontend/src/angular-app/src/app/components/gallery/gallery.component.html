@@ -17,23 +17,42 @@
     class="gallery-overlay"
     (click)="closeGallery()"
   >
-    <button
-      class="nav-button prev"
-      (click)="prevImage(); $event.stopPropagation()"
-    >
-      ❮
-    </button>
-    <img
-      [src]="galleryImage"
-      class="gallery-image"
+    <!-- Image Wrapper -->
+    <div
+      class="image-wrapper"
       (click)="$event.stopPropagation()"
-    />
-    <button
-      class="nav-button next"
-      (click)="nextImage(); $event.stopPropagation()"
     >
-      ❯
-    </button>
+      <!-- Close Button (X) positioned over the image -->
+      <button
+        class="close-button"
+        (click)="closeGallery(); $event.stopPropagation()"
+      >
+        ✖
+      </button>
+
+      <!-- Image -->
+      <img
+        [src]="galleryImage"
+        class="gallery-image"
+      />
+
+      <!-- Navigation Buttons -->
+      @if (currentImageIndex() > 0) {
+      <button
+        class="nav-button prev"
+        (click)="prevImage(); $event.stopPropagation()"
+      >
+        ❮
+      </button>
+      } @if (currentImageIndex() < galleryImages().length - 1) {
+      <button
+        class="nav-button next"
+        (click)="nextImage(); $event.stopPropagation()"
+      >
+        ❯
+      </button>
+      }
+    </div>
   </div>
   }
 </div>
