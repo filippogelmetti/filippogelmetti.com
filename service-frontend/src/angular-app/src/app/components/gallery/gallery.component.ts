@@ -10,8 +10,9 @@ import { PlatformService } from 'src/app/services/platform.service';
 export class GalleryComponent {
   portfolioSubdirPath: any = input();
   portfolioNrOfScreenshots: any = input();
-  public isGalleryOpen = signal(false);
-  public galleryImage = signal('');
+  isGalleryOpen = signal(false);
+  currentImageIndex = signal(0);
+
   galleryImages = computed(() => {
     return Array.from(
       { length: this.portfolioNrOfScreenshots() },
@@ -24,25 +25,28 @@ export class GalleryComponent {
 
   constructor(private platform: PlatformService) {}
 
-  openGallery(imageUrl: string): void {
-    console.log(`Open gallery ${imageUrl}`);
-    this.galleryImage.set(imageUrl);
+  openGallery(index: number): void {
+    this.currentImageIndex.set(index);
     this.isGalleryOpen.set(true);
-  }
-
-  ngOnDestroy(): void {
-    if (this.platform.isBrowser()) {
-      document.removeEventListener('keydown', this.handleKeyDown);
-    }
   }
 
   closeGallery(): void {
     this.isGalleryOpen.set(false);
   }
 
-  private handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Escape' && this.isGalleryOpen()) {
-      this.closeGallery();
+  nextImage(): void {
+    if (this.currentImageIndex() < this.galleryImages().length - 1) {
+      this.currentImageIndex.set(this.currentImageIndex() + 1);
     }
-  };
+  }
+
+  prevImage(): void {
+    if (this.currentImageIndex() > 0) {
+      this.currentImageIndex.set(this.currentImageIndex() - 1);
+    }
+  }
+
+  get galleryImage() {
+    return this.galleryImages()[this.currentImageIndex()] || '';
+  }
 }

@@ -1,8 +1,8 @@
 <div class="screenshots-wrapper">
-  @for (imagePath of galleryImages(); track $index) {
+  @for (imagePath of galleryImages(); track imagePath) {
   <div
     class="screenshot-wrapper"
-    (click)="openGallery(imagePath)"
+    (click)="openGallery($index)"
   >
     <img
       [src]="imagePath"
@@ -17,11 +17,23 @@
     class="gallery-overlay"
     (click)="closeGallery()"
   >
+    <button
+      class="nav-button prev"
+      (click)="prevImage(); $event.stopPropagation()"
+    >
+      ❮
+    </button>
     <img
-      [src]="galleryImage()"
+      [src]="galleryImage"
       class="gallery-image"
       (click)="$event.stopPropagation()"
     />
+    <button
+      class="nav-button next"
+      (click)="nextImage(); $event.stopPropagation()"
+    >
+      ❯
+    </button>
   </div>
   }
 </div>
