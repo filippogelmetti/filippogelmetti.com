@@ -1,0 +1,27 @@
+<div class="screenshots-wrapper">
+  @for (imagePath of galleryImages(); track $index) {
+  <div
+    class="screenshot-wrapper"
+    (click)="openGallery(imagePath)"
+  >
+    <img
+      [src]="imagePath"
+      alt="Screenshot {{ $index + 1 }}"
+    />
+  </div>
+  }
+
+  <!-- Gallery Overlay -->
+  @if (isGalleryOpen()) {
+  <div
+    class="gallery-overlay"
+    (click)="closeGallery()"
+  >
+    <img
+      [src]="galleryImage()"
+      class="gallery-image"
+      (click)="$event.stopPropagation()"
+    />
+  </div>
+  }
+</div>

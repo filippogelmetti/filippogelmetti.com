@@ -61,47 +61,10 @@
           <div class="skills-learned"></div>
         </div>
 
-        <div class="screenshots-wrapper">
-          @for (i of getScreenshotNumbers(); track i) {
-          <div
-            class="screenshot-wrapper"
-            (click)="
-              openGallery(
-                '/portfolio-images/screenshots/' +
-                  portfolioItem?.subDirPathName +
-                  '/' +
-                  (i + 1) +
-                  '.jpg'
-              )
-            "
-          >
-            <img
-              [src]="
-                '/portfolio-images/screenshots/' +
-                portfolioItem?.subDirPathName +
-                '/' +
-                (i + 1) +
-                '.jpg'
-              "
-              alt="Screenshot {{ i + 1 }}"
-            />
-          </div>
-          }
-
-          <!-- Gallery Overlay -->
-          @if (isGalleryOpen()) {
-          <div
-            class="gallery-overlay"
-            (click)="closeGallery()"
-          >
-            <img
-              [src]="galleryImage()"
-              class="gallery-image"
-              (click)="$event.stopPropagation()"
-            />
-          </div>
-          }
-        </div>
+        <gallery
+          [portfolioNrOfScreenshots]="getScreenshotNumbers()"
+          [portfolioSubdirPath]="portfolioItem?.subDirPathName"
+        />
       </div>
       <div class="col-right">
         @if (portfolioItem?.client?.logo) {

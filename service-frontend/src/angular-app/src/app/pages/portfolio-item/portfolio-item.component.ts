@@ -2,12 +2,13 @@ import { Component, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { portfolioData } from '@data/_portfolio-data';
 import { Portfolio } from '@domain/models/portfolio';
-import { PlatformService } from 'src/app/services/platform.service';
+import { GalleryComponent } from '../../components/gallery/gallery.component';
 
 @Component({
   selector: 'portfolio-item',
   templateUrl: './portfolio-item.component.html',
   styleUrl: './portfolio-item.component.scss',
+  imports: [GalleryComponent],
 })
 export class PortfolioItemComponent {
   public portfolio: Portfolio[] = portfolioData;
@@ -16,11 +17,7 @@ export class PortfolioItemComponent {
   public isGalleryOpen = signal(false);
   public galleryImage = signal('');
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private platform: PlatformService
-  ) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
@@ -34,32 +31,9 @@ export class PortfolioItemComponent {
     });
   }
 
-  ngOnDestroy(): void {
-    if (this.platform.isBrowser()) {
-      document.removeEventListener('keydown', this.handleKeyDown);
-    }
+  getScreenshotNumbers(): number {
+    return this.portfolioItem?.nrOfScreenshots || 0;
   }
-
-  getScreenshotNumbers(): number[] {
-    const numScreenshots = this.portfolioItem?.nrOfScreenshots || 0;
-    return Array.from({ length: numScreenshots }, (_, i) => i);
-  }
-
-  openGallery(imageUrl: string): void {
-    console.log('Open gallery');
-    this.galleryImage.set(imageUrl);
-    this.isGalleryOpen.set(true);
-  }
-
-  closeGallery(): void {
-    this.isGalleryOpen.set(false);
-  }
-
-  private handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Escape' && this.isGalleryOpen()) {
-      this.closeGallery();
-    }
-  };
 
   get formattedDate(): string {
     if (!this.portfolioItem?.date) {
