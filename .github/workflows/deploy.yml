@@ -1,0 +1,40 @@
+name: Deploy Angular to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: service-frontend/src/angular-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: service-frontend/src/angular-app/package-lock.json
+      - run: npm ci
+      - run: npx ng build --configuration production --base-href /
+      - run: touch dist/angular-app/browser/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: service-frontend/src/angular-app/dist/angular-app/browser
+      - id: deployment
+        uses: actions/deploy-pages@v4
