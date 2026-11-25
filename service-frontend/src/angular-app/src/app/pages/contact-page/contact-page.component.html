@@ -3,66 +3,10 @@
 </div>
 
 <div class="contact-container">
-  <form
-    [formGroup]="contactForm"
-    (ngSubmit)="sendEmail()"
-    class="contact-form"
-  >
-    <label>
-      Name
-      <input
-        type="text"
-        formControlName="name"
-        placeholder="Your Name"
-      />
-      @if (contactForm.controls.name.invalid &&
-      contactForm.controls.name.touched) {
-      <span class="error">Name is required (min. 3 characters)</span>
-      }
-    </label>
-
-    <label>
-      Email
-      <input
-        type="email"
-        formControlName="email"
-        placeholder="Your Email"
-      />
-      @if (contactForm.controls.email.invalid &&
-      contactForm.controls.email.touched) {
-      <span class="error">Enter a valid email</span>
-      }
-    </label>
-
-    <label>
-      Message
-      <textarea
-        formControlName="message"
-        rows="4"
-        placeholder="Your Message"
-      ></textarea>
-      @if (contactForm.controls.message.invalid &&
-      contactForm.controls.message.touched) {
-      <span class="error">Message must be at least 10 characters long</span>
-      }
-    </label>
-
-    <button
-      type="submit"
-      [disabled]="contactForm.invalid || sending()"
-    >
-      @if (sending()) { Sending... } @else { Send Message }
-    </button>
-
-    @if (success() === true) {
-    <p class="success">Message sent successfully!</p>
-    } @else if (success() === false) {
-    <p class="error">Something went wrong. Try again.</p>
-    }
-  </form>
+  
 
   <div class="linkedin">
-    <p>Or contact me via LinkedIn</p>
+    <p>Contact me via LinkedIn</p>
     <a
       href="https://www.linkedin.com/in/filippo-gelmetti-80b9533/"
       target="_blank"
